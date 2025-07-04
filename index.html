@@ -12,18 +12,18 @@
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://YOUR_WEBSITE_URL.com/">
+    <meta property="og:url" content="https://rowusuduah.github.io/">
     <meta property="og:title" content="Richmond Owusu Duah - Traffic Engineer">
     <meta property="og:description" content="Designing safer streets and smarter cities through simulation, design, and research.">
-    <meta property="og:image" content="https://YOUR_WEBSITE_URL.com/path-to-your-preview-image.jpg">
+    <meta property="og:image" content="https://rowusuduah.github.io/assets/images/social-preview.jpg">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="YOUR_WEBSITE_URL.com">
-    <meta property="twitter:url" content="https://YOUR_WEBSITE_URL.com/">
+    <meta property="twitter:domain" content="rowusuduah.github.io">
+    <meta property="twitter:url" content="https://rowusuduah.github.io/">
     <meta name="twitter:title" content="Richmond Owusu Duah - Traffic Engineer">
     <meta name="twitter:description" content="Designing safer streets and smarter cities through simulation, design, and research.">
-    <meta name="twitter:image" content="https://YOUR_WEBSITE_URL.com/path-to-your-preview-image.jpg">
+    <meta name="twitter:image" content="https://rowusuduah.github.io/assets/images/social-preview.jpg">
 
     <!-- Favicon -->
     <link rel="icon" href="https://placehold.co/32x32/1e40af/ffffff?text=RD" type="image/x-icon">
@@ -39,10 +39,95 @@
     <!-- AOS (Animate on Scroll) Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom Styles and Tailwind Config -->
+    <style>
+        /* Define custom fonts and theme colors */
+        :root {
+            --font-sans: 'Inter', sans-serif;
+            --font-heading: 'Space Grotesk', sans-serif;
+            
+            /* Light Mode Colors */
+            --bg-color: #f8fafc; /* slate-50 */
+            --text-color: #0f172a; /* slate-900 */
+            --primary-color: #2563eb; /* blue-600 */
+            --secondary-color: #475569; /* slate-600 */
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0; /* slate-200 */
+            --road-color: #e2e8f0; /* slate-200 */
+        }
+
+        /* Dark Mode Colors */
+        .dark {
+            --bg-color: #0f172a; /* slate-900 */
+            --text-color: #f8fafc; /* slate-50 */
+            --primary-color: #3b82f6; /* blue-500 */
+            --secondary-color: #94a3b8; /* slate-400 */
+            --card-bg: #1e293b; /* slate-800 */
+            --border-color: #334155; /* slate-700 */
+            --road-color: #1e293b; /* slate-800 */
+        }
+
+        /* Apply base styles */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+        }
+
+        .bg-custom { background-color: var(--bg-color); }
+        .text-custom { color: var(--text-color); }
+        .text-secondary-custom { color: var(--secondary-color); }
+        .bg-card-custom { background-color: var(--card-bg); }
+        .border-custom { border-color: var(--border-color); }
+        .text-primary-custom { color: var(--primary-color); }
+        .bg-primary-custom { background-color: var(--primary-color); }
+        
+        /* Hero Canvas for Animation */
+        #hero-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.3;
+        }
+        
+        /* Project Filter Button Styles */
+        .filter-btn {
+            @apply px-4 py-2 text-sm font-medium rounded-full border border-custom transition-colors duration-200;
+        }
+        .filter-btn.active {
+            @apply bg-primary-custom text-white border-primary-custom;
+        }
+        .filter-btn:not(.active) {
+             @apply hover:bg-gray-200 dark:hover:bg-slate-700;
+        }
+        
+        .skill-tag { @apply bg-primary-custom/10 text-primary-custom text-sm font-medium px-3 py-1 rounded-full; }
+        .social-icon { @apply p-3 rounded-full bg-card-custom border border-custom hover:bg-primary-custom/10 hover:text-primary-custom transition-all duration-300; }
+        .contact-social-icon { @apply text-secondary-custom hover:text-primary-custom transition-colors duration-300; }
+        .tool-tag { @apply bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full; }
+        .form-input { @apply w-full px-4 py-3 rounded-lg bg-custom border border-custom focus:ring-2 focus:ring-primary-custom focus:outline-none transition-shadow; }
+        .gallery-item img { @apply transition-transform duration-300 ease-in-out; }
+        .gallery-item:hover img { @apply scale-105; }
+    </style>
 </head>
 <body class="bg-custom text-custom antialiased">
+
+    <!-- Dark Mode Initializer -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
 
     <!-- Header -->
     <header id="header" class="bg-card-custom/80 backdrop-blur-sm border-b border-custom sticky top-0 z-50 transition-all duration-300">
