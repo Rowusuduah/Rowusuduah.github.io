@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Rowusuduah/Rowusuduah.github.io # IMPORTANT: This is now set to your repository
+  repo: Rowusuduah/Rowusuduah.github.io # This is now set to your repository
   branch: main # or master
 
 media_folder: "assets/images" # Where media files will be stored
