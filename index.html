@@ -3,43 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richmond Owusu Duah - Traffic Engineer</title>
+    <title>Richmond Owusu Duah - Transportation Engineer</title>
     
-    <!-- Standard SEO Meta Tags -->
-    <meta name="description" content="Personal portfolio of Richmond Owusu Duah, a Traffic Engineer and graduate student at the University of South Florida, specializing in traffic simulation, design, and research.">
+    <meta name="description" content="Personal portfolio of Richmond Owusu Duah, a Transportation Engineer and graduate student at the University of South Florida, specializing in traffic simulation, design, and research.">
     <meta name="author" content="Richmond Owusu Duah">
-    <meta name="keywords" content="Richmond Owusu Duah, Traffic Engineer, Transportation Engineer, Civil Engineer, USF, Stantec, SUMO, Synchro, Traffic Simulation, Pavement Design">
-    
-    <!-- Open Graph / Facebook Meta Tags -->
+    <meta name="keywords" content="Richmond Owusu Duah, Traffic Engineer, Transportation Engineer, Civil Engineer, USF, Stantec, SUMO, Synchro, Traffic Simulation, Pavement Design, ITS, Cube, HCS, OpenRoads, FDM">
+
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rowusuduah.github.io/">
-    <meta property="og:title" content="Richmond Owusu Duah - Traffic Engineer">
+    <meta property="og:title" content="Richmond Owusu Duah - Transportation Engineer">
     <meta property="og:description" content="Designing safer streets and smarter cities through simulation, design, and research.">
     <meta property="og:image" content="https://rowusuduah.github.io/assets/images/social-preview.jpg">
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="rowusuduah.github.io">
     <meta property="twitter:url" content="https://rowusuduah.github.io/">
-    <meta name="twitter:title" content="Richmond Owusu Duah - Traffic Engineer">
+    <meta name="twitter:title" content="Richmond Owusu Duah - Transportation Engineer">
     <meta name="twitter:description" content="Designing safer streets and smarter cities through simulation, design, and research.">
     <meta name="twitter:image" content="https://rowusuduah.github.io/assets/images/social-preview.jpg">
 
-    <!-- Favicon -->
     <link rel="icon" href="https://placehold.co/32x32/1e40af/ffffff?text=RD" type="image/x-icon">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS (Animate on Scroll) Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Custom Styles and Tailwind Config -->
     <style>
         /* Define custom fonts and theme colors */
         :root {
@@ -86,41 +78,47 @@
         .border-custom { border-color: var(--border-color); }
         .text-primary-custom { color: var(--primary-color); }
         .bg-primary-custom { background-color: var(--primary-color); }
-        
-        /* Hero Canvas for Animation */
-        #hero-canvas {
+
+        .section-canvas {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
-            opacity: 0.3;
+            z-index: -1;
+            opacity: 0.15;
         }
         
-        /* Project Filter Button Styles */
-        .filter-btn {
-            @apply px-4 py-2 text-sm font-medium rounded-full border border-custom transition-colors duration-200;
-        }
-        .filter-btn.active {
-            @apply bg-primary-custom text-white border-primary-custom;
-        }
-        .filter-btn:not(.active) {
-             @apply hover:bg-gray-200 dark:hover:bg-slate-700;
-        }
-        
-        .skill-tag { @apply bg-primary-custom/10 text-primary-custom text-sm font-medium px-3 py-1 rounded-full; }
+        .skill-tag { @apply bg-primary-custom/10 text-primary-custom text-sm font-medium px-3 py-1.5 rounded-lg border border-primary-custom/20 hover:bg-primary-custom/20 transition-colors; }
         .social-icon { @apply p-3 rounded-full bg-card-custom border border-custom hover:bg-primary-custom/10 hover:text-primary-custom transition-all duration-300; }
         .contact-social-icon { @apply text-secondary-custom hover:text-primary-custom transition-colors duration-300; }
         .tool-tag { @apply bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full; }
         .form-input { @apply w-full px-4 py-3 rounded-lg bg-custom border border-custom focus:ring-2 focus:ring-primary-custom focus:outline-none transition-shadow; }
         .gallery-item img { @apply transition-transform duration-300 ease-in-out; }
         .gallery-item:hover img { @apply scale-105; }
+
+        .waving-hand {
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+
+        @keyframes wave-animation {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
     </style>
 </head>
 <body class="bg-custom text-custom antialiased">
 
-    <!-- Dark Mode Initializer -->
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -129,7 +127,6 @@
         }
     </script>
 
-    <!-- Header -->
     <header id="header" class="bg-card-custom/80 backdrop-blur-sm border-b border-custom sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="font-heading text-xl font-bold text-primary-custom">Richmond O. Duah</a>
@@ -138,8 +135,10 @@
                 <a href="#experience" class="hover:text-primary-custom transition-colors">Experience</a>
                 <a href="#projects" class="hover:text-primary-custom transition-colors">Projects</a>
                 <a href="#leadership" class="hover:text-primary-custom transition-colors">Leadership</a>
+                <a href="#awards" class="hover:text-primary-custom transition-colors">Awards</a>
+                <a href="#education" class="hover:text-primary-custom transition-colors">Education</a>
+                <a href="#hobbies" class="hover:text-primary-custom transition-colors">Hobbies</a>
                 <a href="#gallery" class="hover:text-primary-custom transition-colors">Gallery</a>
-                <a href="#blog" class="hover:text-primary-custom transition-colors">Blog</a>
                 <a href="#contact" class="hover:text-primary-custom transition-colors">Contact</a>
             </div>
             <div class="flex items-center space-x-4">
@@ -152,89 +151,96 @@
                 </button>
             </div>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
             <a href="#about" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">About</a>
             <a href="#experience" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Experience</a>
-            <a href="#education" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Education</a>
             <a href="#projects" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Projects</a>
             <a href="#leadership" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Leadership</a>
+            <a href="#awards" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Awards</a>
+            <a href="#education" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Education</a>
+            <a href="#hobbies" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Hobbies</a>
             <a href="#gallery" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Gallery</a>
-            <a href="#blog" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Blog</a>
             <a href="#contact" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Contact</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden bg-custom">
-            <canvas id="hero-canvas"></canvas>
-            <div class="relative z-10 p-6">
-                <div data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading mb-4">Richmond Owusu Duah</h1>
-                    <p class="text-lg md:text-2xl text-secondary-custom max-w-3xl mx-auto mb-8">Designing safer streets and smarter cities through simulation, design, and research.</p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <a href="#projects" class="bg-primary-custom text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity shadow-lg">Explore My Work</a>
-                        <a href="resume.pdf" download class="bg-card-custom border border-custom font-bold py-3 px-8 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors shadow-lg">Download Resume</a>
-                        <a href="#blog" class="bg-card-custom border border-custom font-bold py-3 px-8 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors shadow-lg">Read My Blog</a>
+        <section id="about" class="relative overflow-hidden pt-20 md:pt-24 pb-20 md:pb-32">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
+                <div class="p-8 md:p-12 bg-card-custom/80 backdrop-blur-sm rounded-xl" data-aos="fade-up">
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <div class="lg:col-span-1 lg:border-r lg:border-custom lg:pr-8">
+                            <div class="sticky top-28 text-center lg:text-left">
+                                <img src="https://placehold.co/400x400/e2e8f0/334155?text=Photo" alt="A profile photo of Richmond Owusu Duah" class="rounded-full shadow-2xl mx-auto w-48 h-48 lg:w-64 lg:h-64 object-cover">
+                                <div class="mt-6">
+                                    <p class="font-bold text-xl text-primary-custom">MSc Transportation Engineering Student</p>
+                                    <p class="text-secondary-custom mt-1">at the University of South Florida, Tampa FL</p>
+                                </div>
+                                <div class="mt-8 space-y-4 text-secondary-custom">
+                                    <div class="flex items-center justify-center lg:justify-start gap-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        <span>Tampa, FL, USA</span>
+                                    </div>
+                                    <div class="flex items-center justify-center lg:justify-start gap-4">
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                                        <span>University of South Florida</span>
+                                    </div>
+                                     <a href="mailto:richmondowusuduah@gmail.com" class="flex items-center justify-center lg:justify-start gap-4 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5 group-hover:text-primary-custom transition-colors"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span class="group-hover:text-primary-custom transition-colors">Email</span>
+                                    </a>
+                                    <a href="https://www.github.com/Rowusuduah" target="_blank" class="flex items-center justify-center lg:justify-start gap-4 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5 group-hover:text-primary-custom transition-colors"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        <span class="group-hover:text-primary-custom transition-colors">GitHub</span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/richmond-owusu-duah-6506321b6" target="_blank" class="flex items-center justify-center lg:justify-start gap-4 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5 group-hover:text-primary-custom transition-colors"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                        <span class="group-hover:text-primary-custom transition-colors">LinkedIn</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-2">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">About Me</h2>
+                            <div class="space-y-4 text-secondary-custom text-lg">
+                                <p>
+                                    <span class="waving-hand">👋</span> Hi, I am Richmond Owusu Duah, a master's student in Civil Engineering (Transportation) at the University of South Florida, graduating in May 2026.
+                                </p>
+                                <p>
+                                    I have a strong interest in traffic impact studies, road safety, traffic signal timings, intersection sightline, site access, ITS planning and design, traffic theory, travel demand modelling, and data science. I leverage my technical knowledge, software skills, and passion for innovation to deliver practical solutions in transportation engineering. I am currently seeking a Traffic or ITS Engineering role where I can grow, contribute, and help develop smart mobility solutions.
+                                </p>
+                                <p>
+                                    Let us connect. I am always open to learning, collaboration, and new challenges in the transportation field.
+                                </p>
+                            </div>
+
+                            <div class="mt-12">
+                                <h3 class="text-2xl font-bold mb-4 font-heading">Softwares</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="skill-tag">Synchro</span>
+                                    <span class="skill-tag">Cube</span>
+                                    <span class="skill-tag">Excel</span>
+                                    <span class="skill-tag">HCS</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">R</span>
+                                    <span class="skill-tag">SUMO</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h3 class="text-2xl font-bold mb-4 font-heading">Learning</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="skill-tag">OpenRoads</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10">
-                <a href="#about" aria-label="Scroll down">
-                    <div class="w-6 h-10 border-2 border-custom rounded-full flex justify-center items-start p-1">
-                        <div class="w-1 h-2 bg-custom rounded-full animate-bounce"></div>
-                    </div>
-                </a>
-            </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20 md:py-32">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-3 gap-12 items-center">
-                    <div class="md:col-span-1" data-aos="fade-right">
-                        <img src="https://placehold.co/400x400/e2e8f0/334155?text=Richmond" alt="A profile photo of Richmond Owusu Duah" class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-full md:h-auto object-cover">
-                    </div>
-                    <div class="md:col-span-2" data-aos="fade-left">
-                        <h2 class="text-3xl md:text-4xl font-bold mb-4 font-heading">About Me</h2>
-                        <p class="text-secondary-custom mb-6 text-lg">
-                            I am a passionate Traffic Engineer and graduate student at the University of South Florida, driven by a mission to enhance urban mobility and safety. My work focuses on leveraging advanced simulation tools and data-driven insights to solve complex transportation challenges. I am dedicated to creating efficient, sustainable, and people-centric transportation systems for the cities of tomorrow.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="skill-tag">Synchro</span><span class="skill-tag">SUMO</span><span class="skill-tag">Civil 3D</span><span class="skill-tag">Python</span><span class="skill-tag">Excel</span><span class="skill-tag">OpenPave</span><span class="skill-tag">R</span><span class="skill-tag">TraCI</span><span class="skill-tag">Traffic Impact Analysis</span><span class="skill-tag">Signal Timing</span><span class="skill-tag">Pavement Design</span><span class="skill-tag">MFD</span><span class="skill-tag">ITS</span>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <a href="https://www.linkedin.com/in/richmondoduah" target="_blank" class="social-icon" aria-label="View my LinkedIn profile">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            </a>
-                            <a href="https://github.com/richmondoduah" target="_blank" class="social-icon" aria-label="View my GitHub profile">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            </a>
-                            <a href="mailto:richmond@example.com" class="social-icon" aria-label="Send me an email">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </a>
-                            <a href="resume.pdf" download class="bg-primary-custom text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity shadow-md flex items-center gap-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Quote Section -->
-        <section class="py-20">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <blockquote class="text-center max-w-3xl mx-auto">
-                    <p class="text-2xl md:text-3xl font-medium text-secondary-custom italic">"Transportation is not about roads. It’s about people, and connecting them to opportunities."</p>
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-20 md:py-32 bg-card-custom border-y border-custom">
+        <section id="experience" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold font-heading">Work Experience</h2>
@@ -242,7 +248,6 @@
                 </div>
                 <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
                      <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
-                        <!-- Stantec -->
                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -256,7 +261,6 @@
                                 <p class="text-sm text-secondary-custom">Upcoming internship focusing on traffic analysis, signal design, and transportation planning projects.</p>
                             </div>
                         </div>
-                        <!-- USF -->
                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -270,7 +274,6 @@
                                 <p class="text-sm text-secondary-custom">Assisted in undergraduate courses, graded assignments, and led lab sessions for transportation engineering modules.</p>
                             </div>
                         </div>
-                        <!-- Electrochem -->
                         <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                             <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -289,58 +292,20 @@
             </div>
         </section>
         
-        <!-- Education Section -->
-        <section id="education" class="py-20 md:py-32">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Education</h2>
-                    <p class="text-secondary-custom mt-2 text-lg">My academic background and qualifications.</p>
-                </div>
-                <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
-                        <!-- USF -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
-                            </div>
-                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card-custom p-4 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
-                                <h4 class="font-bold text-lg">MS, Civil Engineering</h4>
-                                <p class="text-sm font-medium text-primary-custom mb-2">University of South Florida (2024–2026)</p>
-                                <p class="text-sm text-secondary-custom">4.0 GPA. CUTR Masters Scholarship. Coursework in Traffic Flow Theory, Pavement Design, Data Science, Signal Timing.</p>
-                            </div>
-                        </div>
-                        <!-- KNUST -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
-                            </div>
-                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card-custom p-4 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
-                                <h4 class="font-bold text-lg">BSc, Civil Engineering</h4>
-                                <p class="text-sm font-medium text-primary-custom mb-2">KNUST, Ghana (2016–2020)</p>
-                                <p class="text-sm text-secondary-custom">Completed National Service at the Department of Urban Roads, gaining foundational experience in urban infrastructure.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32 bg-card-custom border-y border-custom">
-            <div class="container mx-auto px-6">
+        <section id="projects" class="relative overflow-hidden py-20 md:py-32 bg-card-custom/80 backdrop-blur-sm">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold font-heading">Featured Projects</h2>
                     <p class="text-secondary-custom mt-2 text-lg">A selection of my work in traffic engineering and research.</p>
                 </div>
                 <div class="flex justify-center flex-wrap gap-2 mb-12" data-aos="fade-up" data-aos-delay="100">
                     <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="Synchro">Synchro</button>
-                    <button class="filter-btn" data-filter="SUMO">SUMO</button>
-                    <button class="filter-btn" data-filter="Python">Python</button>
+                    <button class="filter-btn" data-filter="School">School</button>
+                    <button class="filter-btn" data-filter="Work">Work</button>
                 </div>
                 <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project Card 1 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tags="Synchro,VISSIM" data-title="Signal Timing Optimization" data-tools="Synchro 12, VISSIM" data-summary="Optimized signal timings for a coordinated network of 5 intersections in downtown Tampa, resulting in a projected 20% reduction in average vehicle delay and a 15% decrease in stops during peak hours. The project involved data collection, model calibration, and multiple scenario analyses.">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tags="Work,Synchro,VISSIM" data-title="Signal Timing Optimization" data-tools="Synchro 12, VISSIM" data-summary="Optimized signal timings for a coordinated network of 5 intersections in downtown Tampa, resulting in a projected 20% reduction in average vehicle delay and a 15% decrease in stops during peak hours. The project involved data collection, model calibration, and multiple scenario analyses.">
                         <div class="bg-card-custom rounded-lg shadow-lg overflow-hidden border border-custom h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Signals" alt="Signal Timing Project" class="w-full h-48 object-cover">
                             <div class="p-6 flex-grow">
@@ -355,8 +320,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project Card 2 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tags="SUMO,Python,TraCI" data-title="MFD Simulation for Urban Networks" data-tools="SUMO, Python, TraCI" data-summary="Developed a simulation framework to derive Macroscopic Fundamental Diagrams (MFDs) for the USF campus road network. This research helps in understanding network-level traffic dynamics and testing congestion mitigation strategies like perimeter control. The Python scripts automated simulation runs and data extraction via the TraCI interface.">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tags="School,SUMO,Python,TraCI" data-title="MFD Simulation for Urban Networks" data-tools="SUMO, Python, TraCI" data-summary="Developed a simulation framework to derive Macroscopic Fundamental Diagrams (MFDs) for the USF campus road network. This research helps in understanding network-level traffic dynamics and testing congestion mitigation strategies like perimeter control. The Python scripts automated simulation runs and data extraction via the TraCI interface.">
                         <div class="bg-card-custom rounded-lg shadow-lg overflow-hidden border border-custom h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <img src="https://placehold.co/600x400/10b981/ffffff?text=MFD" alt="MFD Simulation Project" class="w-full h-48 object-cover">
                             <div class="p-6 flex-grow">
@@ -371,8 +335,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project Card 3 -->
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tags="Synchro,HCS" data-title="Traffic Impact Analysis" data-tools="Synchro, HCS, ITE Trip Gen" data-summary="Conducted a comprehensive Traffic Impact Analysis (TIA) for a proposed medical campus on Immokalee Road. The study included trip generation, distribution, assignment, and capacity analysis to identify necessary roadway improvements and access management strategies to accommodate future traffic demand.">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tags="Work,Synchro,HCS" data-title="Traffic Impact Analysis" data-tools="Synchro, HCS, ITE Trip Gen" data-summary="Conducted a comprehensive Traffic Impact Analysis (TIA) for a proposed medical campus on Immokalee Road. The study included trip generation, distribution, assignment, and capacity analysis to identify necessary roadway improvements and access management strategies to accommodate future traffic demand.">
                         <div class="bg-card-custom rounded-lg shadow-lg overflow-hidden border border-custom h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
                             <img src="https://placehold.co/600x400/f97316/ffffff?text=TIA" alt="TIA Project" class="w-full h-48 object-cover">
                             <div class="p-6 flex-grow">
@@ -391,32 +354,7 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <section id="gallery" class="py-20 md:py-32">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Gallery</h2>
-                    <p class="text-secondary-custom mt-2 text-lg">Moments from fieldwork, conferences, and student life.</p>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                        <img src="https://placehold.co/500x500/3b82f6/ffffff?text=Fieldwork" alt="Fieldwork photo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
-                    </div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="https://placehold.co/500x500/10b981/ffffff?text=Conference" alt="Conference photo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
-                    </div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://placehold.co/500x500/f97316/ffffff?text=Expo" alt="Engineering Expo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
-                    </div>
-                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="https://placehold.co/500x500/ec4899/ffffff?text=Poster" alt="Poster Session" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Leadership & Awards Section -->
-        <section id="leadership" class="py-20 md:py-32 bg-card-custom border-y border-custom">
+        <section id="leadership" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold font-heading">Leadership & Affiliations</h2>
@@ -432,7 +370,7 @@
                             <div class="w-2 h-2 bg-primary-custom rounded-full flex-shrink-0"></div>
                             <div><span class="font-semibold">Student Leadership Summit</span> – Florida Atlantic University</div>
                         </li>
-                        <li class="flex justify-center items-center gap-4">
+                         <li class="flex justify-center items-center gap-4">
                              <div class="w-2 h-2 bg-primary-custom rounded-full flex-shrink-0"></div>
                             <div>Active member in ASCE, NSBE, African Student Union</div>
                         </li>
@@ -440,8 +378,10 @@
                 </div>
             </div>
         </section>
-        <section id="awards" class="py-20 md:py-32">
-            <div class="container mx-auto px-6">
+        
+        <section id="awards" class="relative overflow-hidden py-20 md:py-32">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold font-heading">Awards & Conferences</h2>
                     <p class="text-secondary-custom mt-2 text-lg">Celebrating achievements and continuous learning.</p>
@@ -468,24 +408,43 @@
                 </div>
             </div>
         </section>
-        <section id="volunteering" class="py-20 md:py-32 bg-card-custom border-y border-custom">
+        
+        <section id="education" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Volunteering</h2>
-                    <p class="text-secondary-custom mt-2 text-lg">Giving back to the community.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Education</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">My academic background and qualifications.</p>
                 </div>
-                <div class="max-w-4xl mx-auto" data-aos="fade-up">
-                    <ul class="space-y-4 text-center">
-                        <li class="flex justify-center items-center gap-4">
-                            <div class="w-2 h-2 bg-primary-custom rounded-full flex-shrink-0"></div>
-                            <div><span class="font-semibold">Engineering Expo Volunteer</span> – K-12 STEM Engagement</div>
-                        </li>
-                    </ul>
+                <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card-custom p-4 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <h4 class="font-bold text-lg">MS, Civil Engineering</h4>
+                                <p class="text-sm font-medium text-primary-custom mb-2">University of South Florida (2024–2026)</p>
+                                <p class="text-sm text-secondary-custom">4.0 GPA. CUTR Masters Scholarship. Coursework in Traffic Flow Theory, Pavement Design, Data Science, Signal Timing.</p>
+                            </div>
+                        </div>
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-card-custom p-4 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <h4 class="font-bold text-lg">BSc, Civil Engineering</h4>
+                                <p class="text-sm font-medium text-primary-custom mb-2">KNUST, Ghana (2016–2020)</p>
+                                <p class="text-sm text-secondary-custom">Completed National Service at the Department of Urban Roads, gaining foundational experience in urban infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="hobbies" class="py-20 md:py-32">
-             <div class="container mx-auto px-6">
+        
+        <section id="hobbies" class="relative overflow-hidden py-20 md:py-32">
+            <canvas class="section-canvas"></canvas>
+             <div class="container mx-auto px-6 relative">
                 <div class="text-center mb-16" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold font-heading">Hobbies & Interests</h2>
                     <p class="text-secondary-custom mt-2 text-lg">Outside of engineering, I enjoy exploring the world through different lenses.</p>
@@ -507,33 +466,47 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="py-20 md:py-32 bg-card-custom border-y border-custom">
+        <section id="volunteering" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold font-heading">From the Blog</h2>
-                    <p class="text-secondary-custom mt-2 text-lg">Insights on transportation, technology, and urbanism.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Volunteering</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Giving back to the community.</p>
                 </div>
-                <div class="space-y-12 max-w-4xl mx-auto">
-                    <!-- Blog Post 1 -->
-                    <div class="blog-post" data-aos="fade-up">
-                        <p class="text-sm text-secondary-custom mb-2">July 3, 2025</p>
-                        <h3 class="text-2xl font-bold mb-3"><a href="#" class="hover:text-primary-custom transition-colors">The Future is Connected: How V2X Technology Will Change Our Commutes</a></h3>
-                        <p class="text-secondary-custom mb-4">Vehicle-to-Everything (V2X) communication is poised to revolutionize our transportation systems. By allowing vehicles to communicate with each other and with infrastructure, we can dramatically improve safety, reduce congestion, and enhance efficiency. This post explores the current state of V2X and what we can expect in the coming years.</p>
-                        <a href="#" class="font-bold text-primary-custom hover:underline">Read More &rarr;</a>
+                <div class="max-w-4xl mx-auto" data-aos="fade-up">
+                    <ul class="space-y-4 text-center">
+                        <li class="flex justify-center items-center gap-4">
+                            <div class="w-2 h-2 bg-primary-custom rounded-full flex-shrink-0"></div>
+                            <div><span class="font-semibold">Engineering Expo Volunteer</span> – K-12 STEM Engagement</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="relative overflow-hidden py-20 md:py-32">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Gallery</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Moments from fieldwork, conferences, and student life.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://placehold.co/500x500/3b82f6/ffffff?text=Fieldwork" alt="Fieldwork photo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
                     </div>
-                    <!-- Blog Post 2 -->
-                    <div class="blog-post" data-aos="fade-up" data-aos-delay="100">
-                        <p class="text-sm text-secondary-custom mb-2">June 15, 2025</p>
-                        <h3 class="text-2xl font-bold mb-3"><a href="#" class="hover:text-primary-custom transition-colors">Beyond the Car: Designing Streets for People, Not Just Traffic</a></h3>
-                        <p class="text-secondary-custom mb-4">For decades, our cities have been designed around the automobile. It's time for a paradigm shift. Complete Streets policies, which prioritize pedestrians, cyclists, and public transit, are creating more vibrant, equitable, and sustainable urban environments. Let's dive into the principles of people-first street design.</p>
-                        <a href="#" class="font-bold text-primary-custom hover:underline">Read More &rarr;</a>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://placehold.co/500x500/10b981/ffffff?text=Conference" alt="Conference photo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://placehold.co/500x500/f97316/ffffff?text=Expo" alt="Engineering Expo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="https://placehold.co/500x500/ec4899/ffffff?text=Poster" alt="Poster Session" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16" data-aos="fade-up">
@@ -559,13 +532,13 @@
                         </div>
                     </form>
                     <div class="flex justify-center items-center space-x-6 mt-8">
-                         <a href="https://www.linkedin.com/in/richmondoduah" target="_blank" class="contact-social-icon" aria-label="LinkedIn">
+                         <a href="https://www.linkedin.com/in/richmond-owusu-duah-6506321b6" target="_blank" class="contact-social-icon" aria-label="LinkedIn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         </a>
-                        <a href="https://github.com/richmondoduah" target="_blank" class="contact-social-icon" aria-label="GitHub">
+                        <a href="https://www.github.com/Rowusuduah" target="_blank" class="contact-social-icon" aria-label="GitHub">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                         </a>
-                        <a href="mailto:richmond@example.com" class="contact-social-icon" aria-label="Email">
+                        <a href="mailto:richmondowusuduah@gmail.com" class="contact-social-icon" aria-label="Email">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </a>
                     </div>
@@ -574,19 +547,16 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400">
         <div class="container mx-auto px-6 py-8 text-center">
              <p>&copy; 2025 Richmond Owusu Duah. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-custom text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 z-50 hover:opacity-90">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><polyline points="5 12 12 5 19 12"></polyline></svg>
     </button>
 
-    <!-- Project Modal -->
     <div id="project-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div id="project-modal-content" class="bg-card-custom rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300">
             <button id="close-modal-btn" class="absolute top-4 right-4 text-secondary-custom hover:text-custom transition-colors">
@@ -598,7 +568,6 @@
         </div>
     </div>
     
-    <!-- Gallery Lightbox Modal -->
     <div id="gallery-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <button id="close-gallery-modal-btn" class="absolute top-4 right-4 text-white hover:opacity-80 transition-opacity">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -607,20 +576,16 @@
     </div>
 
 
-    <!-- AOS (Animate on Scroll) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Custom JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS
             AOS.init({
                 duration: 700,
                 once: true,
                 offset: 50,
             });
 
-            // --- Theme Toggle ---
             const themeToggleBtn = document.getElementById('theme-toggle');
             const darkIcon = document.getElementById('theme-toggle-dark-icon');
             const lightIcon = document.getElementById('theme-toggle-light-icon');
@@ -640,11 +605,9 @@
                 } else {
                     localStorage.setItem('theme', 'light');
                 }
-                // Re-initialize canvas animation with new colors
-                initTrafficAnimation();
+                animations.forEach(anim => anim.init());
             });
 
-            // --- Mobile Menu ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuButton.addEventListener('click', () => {
@@ -656,7 +619,6 @@
                 }
             });
 
-            // --- Scroll to Top Button ---
             const scrollToTopBtn = document.getElementById('scroll-to-top');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 300) {
@@ -669,7 +631,6 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // --- Project Modal ---
             const projectModal = document.getElementById('project-modal');
             const projectModalContent = document.getElementById('project-modal-content');
             const closeModalBtn = document.getElementById('close-modal-btn');
@@ -701,7 +662,6 @@
             closeModalBtn.addEventListener('click', closeProjectModal);
             projectModal.addEventListener('click', (e) => e.target === projectModal && closeProjectModal());
             
-            // --- Gallery Lightbox Modal ---
             const galleryModal = document.getElementById('gallery-modal');
             const galleryModalImage = document.getElementById('gallery-modal-image');
             const closeGalleryModalBtn = document.getElementById('close-gallery-modal-btn');
@@ -719,7 +679,6 @@
             closeGalleryModalBtn.addEventListener('click', closeGalleryModal);
             galleryModal.addEventListener('click', (e) => e.target === galleryModal && closeGalleryModal());
 
-            // --- Close modals with Escape key ---
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') {
                     if (!projectModal.classList.contains('hidden')) closeProjectModal();
@@ -727,7 +686,6 @@
                 }
             });
 
-            // --- Project Filtering ---
             const filterButtons = document.querySelectorAll('.filter-btn');
             const projectGrid = document.getElementById('project-grid');
             const projectCards = Array.from(projectGrid.children);
@@ -751,24 +709,137 @@
             });
 
             // --- Traffic Simulation Animation ---
-            const canvas = document.getElementById('hero-canvas');
-            const ctx = canvas.getContext('2d');
+            class TrafficAnimation {
+                constructor(canvas) {
+                    this.canvas = canvas;
+                    this.ctx = this.canvas.getContext('2d');
+                    this.roads = [];
+                    this.intersections = [];
+                    this.vehicles = [];
+                    this.lastTime = 0;
+                    
+                    this.roadWidth = 30;
+                    this.vehicleSize = { w: 16, h: 8 };
+                    this.stopLineOffset = this.roadWidth / 2 + 5;
+                    this.detectionDistance = 150;
+                    this.carColors = ['#3b82f6'];
 
-            let roads = [];
-            let intersections = [];
-            let vehicles = [];
-            
-            const roadWidth = 30;
-            const vehicleSize = { w: 16, h: 8 };
-            const stopLineOffset = roadWidth / 2 + 5;
-            const detectionDistance = 150;
-            const carColors = ['#3b82f6'];
+                    this.animate = this.animate.bind(this);
+                    this.init();
+                }
+
+                init() {
+                    const parent = this.canvas.parentElement;
+                    this.canvas.width = parent.offsetWidth;
+                    this.canvas.height = parent.offsetHeight;
+                    
+                    this.roads = [
+                        { pos: this.canvas.width * 0.2, vertical: true, dir: 'down' },
+                        { pos: this.canvas.width * 0.8, vertical: true, dir: 'up' },
+                        { pos: this.canvas.height * 0.2, vertical: false, dir: 'right' },
+                        { pos: this.canvas.height * 0.8, vertical: false, dir: 'left' },
+                    ];
+
+                    this.intersections = [];
+                    for (let vRoad of this.roads.filter(r => r.vertical)) {
+                        for (let hRoad of this.roads.filter(r => !r.vertical)) {
+                            this.intersections.push({
+                                x: vRoad.pos,
+                                y: hRoad.pos,
+                                light: new TrafficLight(vRoad.pos, hRoad.pos)
+                            });
+                        }
+                    }
+                    
+                    this.vehicles = [];
+                    for (let i = 0; i < this.roads.length; i++) {
+                        const length = this.roads[i].vertical ? this.canvas.height : this.canvas.width;
+                        for (let j = 0; j < 10; j++) {
+                             this.vehicles.push(new Vehicle(i, 'car', Math.random() * length, this));
+                        }
+                    }
+                }
+
+                animate(timestamp) {
+                    if (!this.lastTime) this.lastTime = timestamp;
+                    const deltaTime = timestamp - this.lastTime;
+                    this.lastTime = timestamp;
+
+                    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                    this.drawRoads();
+                    this.drawStopLines();
+
+                    for (const intersection of this.intersections) {
+                        let verticalQueue = 0;
+                        let horizontalQueue = 0;
+                        for (const vehicle of this.vehicles) {
+                            if (vehicle.type === 'car' && vehicle.isStopped) {
+                                if (vehicle.road.vertical && vehicle.road.pos === intersection.x) {
+                                    if (Math.abs(vehicle.pos - intersection.y) < this.detectionDistance) verticalQueue++;
+                                } else if (!vehicle.road.vertical && vehicle.road.pos === intersection.y) {
+                                     if (Math.abs(vehicle.pos - intersection.x) < this.detectionDistance) horizontalQueue++;
+                                }
+                            }
+                        }
+                        intersection.light.update(deltaTime, verticalQueue, horizontalQueue);
+                        intersection.light.draw(this.ctx, this.roadWidth);
+                    }
+
+                    for (const vehicle of this.vehicles) {
+                        vehicle.update();
+                        vehicle.draw(this.ctx);
+                    }
+
+                    requestAnimationFrame(this.animate);
+                }
+                
+                drawRoads() {
+                    const roadColor = getComputedStyle(document.documentElement).getPropertyValue('--road-color').trim();
+                    this.ctx.strokeStyle = roadColor;
+                    this.ctx.lineWidth = this.roadWidth;
+                    this.ctx.lineCap = 'round';
+                    for (const road of this.roads) {
+                        this.ctx.beginPath();
+                        if (road.vertical) {
+                            this.ctx.moveTo(road.pos, 0);
+                            this.ctx.lineTo(road.pos, this.canvas.height);
+                        } else {
+                            this.ctx.moveTo(0, road.pos);
+                            this.ctx.lineTo(this.canvas.width, road.pos);
+                        }
+                        this.ctx.stroke();
+                    }
+                }
+
+                drawStopLines() {
+                    this.ctx.strokeStyle = document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(203, 213, 225, 0.5)';
+                    this.ctx.lineWidth = 2;
+                    for (const intersection of this.intersections) {
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x - this.roadWidth/2, intersection.y - this.stopLineOffset);
+                        this.ctx.lineTo(intersection.x + this.roadWidth/2, intersection.y - this.stopLineOffset);
+                        this.ctx.stroke();
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x - this.roadWidth/2, intersection.y + this.stopLineOffset);
+                        this.ctx.lineTo(intersection.x + this.roadWidth/2, intersection.y + this.stopLineOffset);
+                        this.ctx.stroke();
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x - this.stopLineOffset, intersection.y - this.roadWidth/2);
+                        this.ctx.lineTo(intersection.x - this.stopLineOffset, intersection.y + this.roadWidth/2);
+                        this.ctx.stroke();
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x + this.stopLineOffset, intersection.y - this.roadWidth/2);
+                        this.ctx.lineTo(intersection.x + this.stopLineOffset, intersection.y + this.roadWidth/2);
+                        this.ctx.stroke();
+                    }
+                }
+            }
 
             class TrafficLight {
                 constructor(x, y) {
                     this.x = x;
                     this.y = y;
-                    this.state = Math.random() > 0.5 ? 0 : 2; // 0: V_GREEN, 2: H_GREEN
+                    this.state = Math.random() > 0.5 ? 0 : 2;
                     this.timer = 0;
                     this.minGreenTime = 3000;
                     this.maxGreenTime = 10000;
@@ -779,58 +850,38 @@
                 update(deltaTime, verticalQueue, horizontalQueue) {
                     this.timer += deltaTime;
                     switch(this.state) {
-                        case 0: // Vertical Green
-                            if ((this.timer > this.minGreenTime && horizontalQueue > 0) || this.timer > this.maxGreenTime) {
-                                this.state = 1; this.timer = 0;
-                            }
-                            break;
-                        case 1: // Vertical Yellow
-                            if (this.timer > this.yellowTime) {
-                                this.state = 4; this.timer = 0;
-                            }
-                            break;
-                        case 2: // Horizontal Green
-                            if ((this.timer > this.minGreenTime && verticalQueue > 0) || this.timer > this.maxGreenTime) {
-                                this.state = 3; this.timer = 0;
-                            }
-                            break;
-                        case 3: // Horizontal Yellow
-                            if (this.timer > this.yellowTime) {
-                                this.state = 4; this.timer = 0;
-                            }
-                            break;
-                        case 4: // All Red
-                            if (this.timer > this.allRedTime) {
-                                this.state = (horizontalQueue >= verticalQueue) ? 2 : 0;
-                                this.timer = 0;
-                            }
-                            break;
+                        case 0: if ((this.timer > this.minGreenTime && horizontalQueue > 0) || this.timer > this.maxGreenTime) { this.state = 1; this.timer = 0; } break;
+                        case 1: if (this.timer > this.yellowTime) { this.state = 4; this.timer = 0; } break;
+                        case 2: if ((this.timer > this.minGreenTime && verticalQueue > 0) || this.timer > this.maxGreenTime) { this.state = 3; this.timer = 0; } break;
+                        case 3: if (this.timer > this.yellowTime) { this.state = 4; this.timer = 0; } break;
+                        case 4: if (this.timer > this.allRedTime) { this.state = (horizontalQueue >= verticalQueue) ? 2 : 0; this.timer = 0; } break;
                     }
                 }
 
-                draw() {
+                draw(ctx, roadWidth) {
                     const lightSize = 6;
-                    let verticalColor, horizontalColor;
+                    let vColor, hColor;
                     switch(this.state) {
-                        case 0: verticalColor = '#22c55e'; horizontalColor = '#ef4444'; break;
-                        case 1: verticalColor = '#facc15'; horizontalColor = '#ef4444'; break;
-                        case 2: verticalColor = '#ef4444'; horizontalColor = '#22c55e'; break;
-                        case 3: verticalColor = '#ef4444'; horizontalColor = '#facc15'; break;
-                        case 4: verticalColor = '#ef4444'; horizontalColor = '#ef4444'; break;
+                        case 0: vColor = '#22c55e'; hColor = '#ef4444'; break;
+                        case 1: vColor = '#facc15'; hColor = '#ef4444'; break;
+                        case 2: vColor = '#ef4444'; hColor = '#22c55e'; break;
+                        case 3: vColor = '#ef4444'; hColor = '#facc15'; break;
+                        case 4: vColor = '#ef4444'; hColor = '#ef4444'; break;
                     }
-                    ctx.fillStyle = verticalColor;
+                    ctx.fillStyle = vColor;
                     ctx.fillRect(this.x - roadWidth / 2 - lightSize - 2, this.y - roadWidth / 2 - lightSize - 2, lightSize, lightSize);
                     ctx.fillRect(this.x + roadWidth / 2 + 2, this.y + roadWidth / 2 + 2, lightSize, lightSize);
-                    ctx.fillStyle = horizontalColor;
+                    ctx.fillStyle = hColor;
                     ctx.fillRect(this.x + roadWidth / 2 + 2, this.y - roadWidth / 2 - lightSize - 2, lightSize, lightSize);
                     ctx.fillRect(this.x - roadWidth / 2 - lightSize - 2, this.y + roadWidth / 2 + 2, lightSize, lightSize);
                 }
             }
 
             class Vehicle {
-                constructor(roadIndex, type = 'car', initialPos) {
+                constructor(roadIndex, type = 'car', initialPos, animation) {
+                    this.animation = animation;
                     this.roadIndex = roadIndex;
-                    this.road = roads[roadIndex];
+                    this.road = this.animation.roads[roadIndex];
                     this.pos = initialPos;
                     this.type = type;
                     this.laneOffset = 0;
@@ -842,7 +893,7 @@
                         this.color = '#ffffff';
                     } else {
                         this.speed = (Math.random() * 0.8 + 0.6);
-                        this.color = carColors[Math.floor(Math.random() * carColors.length)];
+                        this.color = this.animation.carColors[0];
                     }
                 }
 
@@ -852,51 +903,33 @@
                     this.isHighBeam = true;
                     
                     if (this.type === 'car') {
-                        // 1. Light Check
-                        for (const intersection of intersections) {
+                        for (const intersection of this.animation.intersections) {
                             if ((this.road.vertical && this.road.pos !== intersection.x) || (!this.road.vertical && this.road.pos !== intersection.y)) continue;
                             const light = intersection.light;
                             const stopPoint = this.road.vertical ? intersection.y : intersection.x;
-                            const stopDist = this.road.dir === 'down' || this.road.dir === 'right' ? stopPoint - (stopLineOffset + vehicleSize.w / 2) : stopPoint + (stopLineOffset + vehicleSize.w / 2);
+                            const stopDist = this.road.dir === 'down' || this.road.dir === 'right' ? stopPoint - (this.animation.stopLineOffset + this.animation.vehicleSize.w / 2) : stopPoint + (this.animation.stopLineOffset + this.animation.vehicleSize.w / 2);
                             const dist = this.road.dir === 'down' || this.road.dir === 'right' ? stopDist - this.pos : this.pos - stopDist;
-
                             if (dist < 0 && dist > -this.speed * 2) {
                                 const canGo = (this.road.vertical && light.state === 0) || (!this.road.vertical && light.state === 2);
-                                if (!canGo) {
-                                    this.pos = stopDist;
-                                    this.isStopped = true;
-                                    break;
-                                }
+                                if (!canGo) { this.pos = stopDist; this.isStopped = true; break; }
                             }
                         }
 
-                        // 2. Vehicle Following Check
                         if (!this.isStopped) {
-                            const safetyGap = vehicleSize.w * 1.5;
-                            for (const other of vehicles) {
+                            const safetyGap = this.animation.vehicleSize.w * 1.5;
+                            for (const other of this.animation.vehicles) {
                                 if (this === other || this.roadIndex !== other.roadIndex) continue;
-
-                                let distance;
-                                if (this.road.dir === other.road.dir) {
-                                    if (this.road.dir === 'down' || this.road.dir === 'right') distance = other.pos - this.pos;
-                                    else distance = this.pos - other.pos;
-                                } else continue;
-
+                                let distance = (this.road.dir === 'down' || this.road.dir === 'right') ? other.pos - this.pos : this.pos - other.pos;
                                 if (other.type === 'ambulance' && distance > 0 && distance < 300) {
                                     isYielding = true;
                                 }
-
-                                if (distance > 0 && distance < safetyGap) {
-                                    this.isStopped = true;
-                                    this.isHighBeam = false; // Dim lights when behind another car
-                                    break;
-                                }
+                                if (distance > 0 && distance < safetyGap) { this.isStopped = true; this.isHighBeam = false; break; }
                             }
                         }
                     }
                     
-                    const targetOffset = isYielding ? (roadWidth / 4) : 0;
-                    this.laneOffset += (targetOffset - this.laneOffset) * 0.15; // Faster pull-over
+                    const targetOffset = isYielding ? (this.animation.roadWidth / 4) : 0;
+                    this.laneOffset += (targetOffset - this.laneOffset) * 0.15;
 
                     if (!this.isStopped) {
                         const currentSpeed = isYielding ? this.speed * 0.5 : this.speed;
@@ -904,181 +937,69 @@
                         else this.pos += currentSpeed;
                     }
                     
-                    const length = this.road.vertical ? canvas.height : canvas.width;
+                    const length = this.road.vertical ? this.animation.canvas.height : this.animation.canvas.width;
                     const isOffScreen = (this.road.dir === 'down' || this.road.dir === 'right') ? this.pos > length + 50 : this.pos < -50;
-
                     if (isOffScreen) {
-                        const myIndex = vehicles.findIndex(v => v === this);
+                        const myIndex = this.animation.vehicles.findIndex(v => v === this);
                         if (myIndex !== -1) {
-                            vehicles[myIndex] = new Vehicle(this.roadIndex, 'car', (this.road.dir === 'down' || this.road.dir === 'right') ? -50 : length + 50);
+                            this.animation.vehicles[myIndex] = new Vehicle(this.roadIndex, 'car', (this.road.dir === 'down' || this.road.dir === 'right') ? -50 : length + 50, this.animation);
                         }
                     }
                 }
 
-                draw() {
+                draw(ctx) {
                     ctx.save();
                     let xPos = this.road.vertical ? this.road.pos + this.laneOffset : this.pos;
                     let yPos = this.road.vertical ? this.pos : this.road.pos + this.laneOffset;
-                    
                     ctx.translate(xPos, yPos);
-
                     if (this.road.dir === 'down') ctx.rotate(Math.PI / 2);
                     else if (this.road.dir === 'up') ctx.rotate(-Math.PI / 2);
                     else if (this.road.dir === 'left') ctx.rotate(Math.PI);
-                    
                     ctx.fillStyle = this.color;
-                    ctx.fillRect(-vehicleSize.w / 2, -vehicleSize.h / 2, vehicleSize.w, vehicleSize.h);
-                    
+                    ctx.fillRect(-this.animation.vehicleSize.w / 2, -this.animation.vehicleSize.h / 2, this.animation.vehicleSize.w, this.animation.vehicleSize.h);
                     if (this.type === 'ambulance') {
                         ctx.fillStyle = '#ef4444';
                         ctx.fillRect(-3, -2, 6, 4);
                         ctx.fillRect(-2, -3, 4, 6);
                     }
-                    
-                    // Headlights
                     if (document.documentElement.classList.contains('dark')) {
                         const highBeam = this.type === 'ambulance' || this.isHighBeam;
                         const beamLength = highBeam ? 60 : 30;
                         const beamWidth = highBeam ? 25 : 20;
                         const beamOpacity = highBeam ? 0.25 : 0.15;
-                        
-                        const gradient = ctx.createLinearGradient(vehicleSize.w / 2, 0, vehicleSize.w / 2 + beamLength, 0);
+                        const gradient = ctx.createLinearGradient(this.animation.vehicleSize.w / 2, 0, this.animation.vehicleSize.w / 2 + beamLength, 0);
                         gradient.addColorStop(0, `rgba(255, 255, 255, ${beamOpacity})`);
                         gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-
                         ctx.fillStyle = gradient;
                         ctx.beginPath();
-                        ctx.moveTo(vehicleSize.w / 2, -vehicleSize.h / 2);
-                        ctx.lineTo(vehicleSize.w / 2 + beamLength, -beamWidth / 2);
-                        ctx.lineTo(vehicleSize.w / 2 + beamLength, beamWidth / 2);
-                        ctx.lineTo(vehicleSize.w / 2, vehicleSize.h / 2);
+                        ctx.moveTo(this.animation.vehicleSize.w / 2, -this.animation.vehicleSize.h / 2);
+                        ctx.lineTo(this.animation.vehicleSize.w / 2 + beamLength, -beamWidth / 2);
+                        ctx.lineTo(this.animation.vehicleSize.w / 2 + beamLength, beamWidth / 2);
+                        ctx.lineTo(this.animation.vehicleSize.w / 2, this.animation.vehicleSize.h / 2);
                         ctx.closePath();
                         ctx.fill();
                     }
-
                     ctx.restore();
                 }
             }
 
-            function drawRoads() {
-                ctx.strokeStyle = getComputedStyle(document.documentElement).getPropertyValue('--road-color');
-                ctx.lineWidth = roadWidth;
-                ctx.lineCap = 'round';
-                for (const road of roads) {
-                    ctx.beginPath();
-                    if (road.vertical) {
-                        ctx.moveTo(road.pos, 0);
-                        ctx.lineTo(road.pos, canvas.height);
-                    } else {
-                        ctx.moveTo(0, road.pos);
-                        ctx.lineTo(canvas.width, road.pos);
-                    }
-                    ctx.stroke();
-                }
-            }
+            let animations = [];
+            document.querySelectorAll('.section-canvas').forEach(canvas => {
+                const anim = new TrafficAnimation(canvas);
+                animations.push(anim);
+                setInterval(() => {
+                    if (anim.vehicles.some(v => v.type === 'ambulance')) return;
+                    const randomIndex = Math.floor(Math.random() * anim.vehicles.length);
+                    const oldVehicle = anim.vehicles[randomIndex];
+                    anim.vehicles[randomIndex] = new Vehicle(oldVehicle.roadIndex, 'ambulance', oldVehicle.pos, anim);
+                }, 12000);
+            });
 
-            function drawStopLines() {
-                ctx.strokeStyle = document.documentElement.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(203, 213, 225, 0.5)';
-                ctx.lineWidth = 2;
-                for (const intersection of intersections) {
-                    // Horizontal road stop lines
-                    ctx.beginPath();
-                    ctx.moveTo(intersection.x - roadWidth/2, intersection.y - stopLineOffset);
-                    ctx.lineTo(intersection.x + roadWidth/2, intersection.y - stopLineOffset);
-                    ctx.stroke();
-                    ctx.beginPath();
-                    ctx.moveTo(intersection.x - roadWidth/2, intersection.y + stopLineOffset);
-                    ctx.lineTo(intersection.x + roadWidth/2, intersection.y + stopLineOffset);
-                    ctx.stroke();
+            animations.forEach(anim => anim.animate(0));
 
-                    // Vertical road stop lines
-                    ctx.beginPath();
-                    ctx.moveTo(intersection.x - stopLineOffset, intersection.y - roadWidth/2);
-                    ctx.lineTo(intersection.x - stopLineOffset, intersection.y + roadWidth/2);
-                    ctx.stroke();
-                    ctx.beginPath();
-                    ctx.moveTo(intersection.x + stopLineOffset, intersection.y - roadWidth/2);
-                    ctx.lineTo(intersection.x + stopLineOffset, intersection.y + roadWidth/2);
-                    ctx.stroke();
-                }
-            }
-            
-            function spawnAmbulance() {
-                if (vehicles.some(v => v.type === 'ambulance')) return;
-                const randomIndex = Math.floor(Math.random() * vehicles.length);
-                const oldVehicle = vehicles[randomIndex];
-                vehicles[randomIndex] = new Vehicle(oldVehicle.roadIndex, 'ambulance', oldVehicle.pos);
-            }
-
-            function initTrafficAnimation() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                
-                roads = [
-                    { pos: canvas.width * 0.1, vertical: true, dir: 'down' },
-                    { pos: canvas.width * 0.9, vertical: true, dir: 'up' },
-                    { pos: canvas.height * 0.1, vertical: false, dir: 'right' },
-                    { pos: canvas.height * 0.9, vertical: false, dir: 'left' },
-                ];
-
-                intersections = [];
-                for (let vRoad of roads.filter(r => r.vertical)) {
-                    for (let hRoad of roads.filter(r => !r.vertical)) {
-                        intersections.push({
-                            x: vRoad.pos,
-                            y: hRoad.pos,
-                            light: new TrafficLight(vRoad.pos, hRoad.pos)
-                        });
-                    }
-                }
-                
-                vehicles = [];
-                for (let i = 0; i < roads.length; i++) {
-                    const length = roads[i].vertical ? canvas.height : canvas.width;
-                    for (let j = 0; j < 10; j++) {
-                         vehicles.push(new Vehicle(i, 'car', Math.random() * length));
-                    }
-                }
-            }
-
-            let lastTime = 0;
-            function animateTraffic(timestamp) {
-                if (!lastTime) lastTime = timestamp;
-                const deltaTime = timestamp - lastTime;
-                lastTime = timestamp;
-
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                drawRoads();
-                drawStopLines();
-
-                for (const intersection of intersections) {
-                    let verticalQueue = 0;
-                    let horizontalQueue = 0;
-                    for (const vehicle of vehicles) {
-                        if (vehicle.type === 'car' && vehicle.isStopped) {
-                            if (vehicle.road.vertical && vehicle.road.pos === intersection.x) {
-                                if (Math.abs(vehicle.pos - intersection.y) < detectionDistance) verticalQueue++;
-                            } else if (!vehicle.road.vertical && vehicle.road.pos === intersection.y) {
-                                 if (Math.abs(vehicle.pos - intersection.x) < detectionDistance) horizontalQueue++;
-                            }
-                        }
-                    }
-                    intersection.light.update(deltaTime, verticalQueue, horizontalQueue);
-                    intersection.light.draw();
-                }
-
-                for (const vehicle of vehicles) {
-                    vehicle.update();
-                    vehicle.draw();
-                }
-
-                requestAnimationFrame(animateTraffic);
-            }
-
-            window.addEventListener('resize', initTrafficAnimation);
-            initTrafficAnimation();
-            requestAnimationFrame(animateTraffic);
-            setInterval(spawnAmbulance, 25000);
+            window.addEventListener('resize', () => {
+                animations.forEach(anim => anim.init());
+            });
         });
     </script>
 </body>
