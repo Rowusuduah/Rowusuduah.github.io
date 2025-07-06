@@ -6,7 +6,7 @@
     <title>Richmond Owusu Duah - Transportation Engineer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Personal portfolio of Richmond Owusu Duah, a Transportation Engineer and graduate student at the University of South Florida, specializing in traffic simulation, design, and research.">
+    <meta name="description" content="Personal portfolio of Richmond Owusu Duah, a master's student in Civil Engineering (Transportation) at the University of South Florida.">
     <meta name="author" content="Richmond Owusu Duah">
     <meta name="keywords" content="Richmond Owusu Duah, Traffic Engineer, Transportation Engineer, Civil Engineer, USF, Stantec, SUMO, Synchro, Traffic Simulation, Pavement Design, ITS, Cube, HCS, OpenRoads, FDM">
 
@@ -135,6 +135,10 @@
         .contact-social-icon { @apply text-secondary-custom hover:text-primary-custom transition-colors duration-300; }
         .tool-tag { @apply bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full; }
         .form-input { @apply w-full px-4 py-3 rounded-lg bg-card-custom border border-custom text-custom focus:ring-2 focus:ring-primary-custom focus:outline-none transition-shadow; }
+        /* FIX: Override text color in dark mode for visibility */
+        .dark .form-input {
+            color: var(--primary-color);
+        }
         .form-input::placeholder {
             color: var(--secondary-color);
             opacity: 0.7;
