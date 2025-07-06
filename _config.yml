@@ -1,0 +1,8 @@
+title: "Richmond Owusu Duah"
+collections:
+  projects:
+    output: true
+  gallery:
+    output: true
+markdown: kramdown
+permalink: /:collection/:name/
