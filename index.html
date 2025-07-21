@@ -3,84 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richmond Owusu Duah - Portfolio Owner</title>
+    <title>Richmond Owusu Duah - Transportation Engineer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore the portfolio of Richmond Owusu Duah, Welcome to my portfolio">
+    <meta name="description" content="Explore the portfolio of Richmond Owusu Duah, a Transportation Engineering master's student at the University of South Florida. Discover projects in traffic simulation, safety, and analysis.">
     <meta name="author" content="Richmond Owusu Duah">
-    
+    <meta name="keywords" content="Richmond Owusu Duah, Traffic Engineer, Transportation Engineer, Civil Engineer, USF, Stantec, SUMO, Synchro, Traffic Simulation, Pavement Design, ITS, Cube, HCS, OpenRoads, FDM">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rowusuduah.github.io/">
+    <meta property="og:title" content="Richmond Owusu Duah - Transportation Engineer">
+    <meta property="og:description" content="Explore the portfolio of Richmond Owusu Duah, a Transportation Engineering master's student at the University of South Florida. Discover projects in traffic simulation, safety, and analysis.">
+    <meta property="og:image" content="https://rowusuduah.github.io/images/IMG_7067%20(3).jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="rowusuduah.github.io">
+    <meta property="twitter:url" content="https://rowusuduah.github.io/">
+    <meta name="twitter:title" content="Richmond Owusu Duah - Transportation Engineer">
+    <meta name="twitter:description" content="Explore the portfolio of Richmond Owusu Duah, a Transportation Engineering master's student at the University of South Florida. Discover projects in traffic simulation, safety, and analysis.">
+    <meta name="twitter:image" content="https://rowusuduah.github.io/images/IMG_7067%20(3).jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://placehold.co/32x32/1e40af/ffffff?text=RD" type="image/x-icon">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <!-- Animate on Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Richmond Owusu Duah",
+      "url": "https://rowusuduah.github.io/",
+      "image": "https://rowusuduah.github.io/images/IMG_7067 (3).jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/richmond-owusu-duah-6506321b6",
+        "https://www.github.com/Rowusuduah"
+      ],
+      "jobTitle": "Transportation Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "University of South Florida"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of South Florida",
+          "sameAs": "https://www.usf.edu/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "KNUST, Ghana"
+        }
+      ],
+      "knowsAbout": ["Traffic Engineering", "Transportation Planning", "Traffic Simulation", "Road Safety", "Pavement Design", "Intelligent Transportation Systems (ITS)", "SUMO", "Synchro", "VISSIM", "Cube", "HCS", "OpenRoads"]
+    }
+    </script>
+
     <style>
+        /* Define custom fonts and theme colors */
         :root {
             --font-sans: 'Inter', sans-serif;
             --font-heading: 'Space Grotesk', sans-serif;
-            --bg-color: #f8fafc;
-            --text-color: #0f172a;
-            --primary-color: #667EEA;
-            --secondary-color: #475569;
+            
+            /* Light Mode Colors */
+            --bg-color: #f8fafc; /* slate-50 */
+            --text-color: #0f172a; /* slate-900 */
+            --primary-color: #2563eb; /* blue-600 */
+            --secondary-color: #475569; /* slate-600 */
             --card-bg: #ffffff;
-            --border-color: #e2e8f0;
+            --border-color: #e2e8f0; /* slate-200 */
+            --road-color: #e2e8f0; /* slate-200 */
         }
-        
+
+        /* Dark Mode Colors */
+        .dark {
+            --bg-color: #0f172a; /* slate-900 */
+            --text-color: #f8fafc; /* slate-50 */
+            --primary-color: #3b82f6; /* blue-500 */
+            --secondary-color: #94a3b8; /* slate-400 */
+            --card-bg: #1e293b; /* slate-800 */
+            --border-color: #334155; /* slate-700 */
+            --road-color: #1e293b; /* slate-800 */
+        }
+
+        /* Apply base styles */
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: var(--font-sans);
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-        
+
         h1, h2, h3, h4, h5, h6 {
             font-family: var(--font-heading);
         }
+
+        /* Custom utility classes for theming */
+        .bg-custom { background-color: var(--bg-color); }
+        .text-custom { color: var(--text-color); }
+        .text-secondary-custom { color: var(--secondary-color); }
+        .bg-card-custom { background-color: var(--card-bg); }
+        .border-custom { border-color: var(--border-color); }
+        .text-primary-custom { color: var(--primary-color); }
+        .bg-primary-custom { background-color: var(--primary-color); }
+
+        .section-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        
+        /* Component Styles */
+        .skill-tag { @apply bg-primary-custom/10 text-primary-custom text-sm font-medium px-3 py-1.5 rounded-lg border border-primary-custom/20 hover:bg-primary-custom/20 transition-colors; }
+        .social-icon { @apply p-3 rounded-full bg-card-custom border border-custom hover:bg-primary-custom/10 hover:text-primary-custom transition-all duration-300; }
+        .contact-social-icon { @apply text-secondary-custom hover:text-primary-custom transition-colors duration-300; }
+        .tool-tag { @apply bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 text-xs font-semibold px-2.5 py-1 rounded-full; }
+        .form-input { @apply w-full px-4 py-3 rounded-lg bg-card-custom border border-custom focus:ring-2 focus:ring-primary-custom focus:outline-none transition-shadow; }
+        .dark .form-input {
+            color: var(--primary-color);
+        }
+        .form-input::placeholder {
+            color: var(--secondary-color);
+            opacity: 0.7;
+        }
+        .gallery-item img { @apply transition-transform duration-300 ease-in-out; }
+        .gallery-item:hover img { @apply scale-105; }
+        .filter-btn { @apply px-4 py-2 rounded-full text-sm font-medium transition-colors; }
+        .filter-btn.active { @apply bg-primary-custom text-white; }
+        .filter-btn:not(.active) { @apply bg-card-custom border border-custom hover:bg-primary-custom/10 hover:text-primary-custom; }
+
+        /* Waving Hand Animation */
+        .waving-hand {
+            animation-name: wave-animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+
+        @keyframes wave-animation {
+            0% { transform: rotate( 0.0deg) }
+           10% { transform: rotate(14.0deg) }
+           20% { transform: rotate(-8.0deg) }
+           30% { transform: rotate(14.0deg) }
+           40% { transform: rotate(-4.0deg) }
+           50% { transform: rotate(10.0deg) }
+           60% { transform: rotate( 0.0deg) }
+          100% { transform: rotate( 0.0deg) }
+        }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-custom text-custom antialiased">
+
+    <!-- Theme initialization script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+    <header id="header" class="bg-card-custom/80 backdrop-blur-sm border-b border-custom sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="font-bold text-xl" style="color: var(--primary-color)">Richmond Owusu Duah</a>
+            <a href="#" class="font-heading text-xl font-bold text-primary-custom">Richmond O. Duah</a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about-me" class="hover:text-blue-600 transition-colors">About Me</a><a href="#work-experience" class="hover:text-blue-600 transition-colors">Work Experience</a><a href="#featured-projects" class="hover:text-blue-600 transition-colors">Featured Projects</a>
+                <a href="#about-me" class="hover:text-primary-custom transition-colors">About Me</a>
+                <a href="#work-experience" class="hover:text-primary-custom transition-colors">Work Experience</a>
+                <a href="#featured-projects" class="hover:text-primary-custom transition-colors">Featured Projects</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+                <button id="mobile-menu-button" aria-label="Open mobile menu" class="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#about-me" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">About Me</a>
+            <a href="#work-experience" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Work Experience</a>
+            <a href="#featured-projects" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Featured Projects</a>
+        </div>
     </header>
-    
+
     <main>
         
-    <section id="about-me" class="relative overflow-hidden pt-20 md:pt-24 pb-20 md:pb-32">
-        <div class="container mx-auto px-6 relative">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900">Hi, I am Richmond Owusu Duah, a master's student in Civil Engineering (Transportation) at the University of South Florida, graduating in May 2026.</h1>
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">I have a strong interest in traffic impact studies, road safety, traffic signal timings, intersection sightline, site access, ITS planning and design, traffic theory, travel demand modelling, and data science. I leverage my technical knowledge, software skills, and passion for innovation to deliver practical solutions in transportation engineering. I am currently seeking a Traffic or ITS Engineering role where I can grow, contribute, and help develop smart mobility solutions.</p>
-                <p class="text-lg text-gray-500">Let us connect. I am always open to learning, collaboration, and new challenges in the transportation field.</p>
+        <!-- About Section -->
+        <section id="about-me" class="relative overflow-hidden pt-20 md:pt-24 pb-20 md:pb-32">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
+                <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-custom leading-tight">
+                        Hi, I am Richmond Owusu Duah, a master's student in Civil Engineering (Transportation) at the University of South Florida, graduating in May 2026.
+                    </h1>
+                    <p class="text-xl text-secondary-custom mb-8 leading-relaxed max-w-3xl mx-auto">
+                        I have a strong interest in traffic impact studies, road safety, traffic signal timings, intersection sightline, site access, ITS planning and design, traffic theory, travel demand modelling, and data science. I leverage my technical knowledge, software skills, and passion for innovation to deliver practical solutions in transportation engineering. I am currently seeking a Traffic or ITS Engineering role where I can grow, contribute, and help develop smart mobility solutions.
+                    </p>
+                    
+                    <p class="text-lg text-secondary-custom/80 max-w-2xl mx-auto">
+                        Let us connect. I am always open to learning, collaboration, and new challenges in the transportation field.
+                    </p>
+                    
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
   
 
-    <section id="work-experience" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">Work Experience</h2>
-            <div class="max-w-4xl mx-auto space-y-8">
-                
-                    <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                        <h3 class="text-xl font-bold text-blue-600 mb-2">Transportation Engineering Intern</h3>
-                        <p class="font-semibold text-gray-700 mb-1">Stantec · Tampa, FL</p>
-                        <p class="text-sm text-gray-500 mb-3">Summer 2025</p>
-                        <p class="text-gray-600">Worked on traffic impact studies for projects in Tampa, St. Petersburg, Plant City, and Naples.</p>
-                        <p class="text-sm text-gray-500 mb-4">Summer 2025</p>
-                        <p class="text-gray-600">Worked on traffic impact studies for projects in Tampa, St. Petersburg, Plant City, and Naples.</p>
-                    </div>
-                
+        <!-- Experience Section -->
+        <section id="work-experience" class="py-20 bg-card-custom">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-custom" data-aos="fade-up">Work Experience</h2>
+                <div class="max-w-4xl mx-auto">
+                    
+                        <div class="mb-12 last:mb-0" data-aos="fade-up" data-aos-delay="0">
+                            <div class="bg-card-custom border border-custom rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
+                                <h3 class="text-xl font-bold text-primary-custom mb-2">Transportation Engineering Intern</h3>
+                                <p class="font-semibold text-custom mb-1">Stantec · Tampa, FL</p>
+                                <p class="text-sm text-secondary-custom mb-4">Summer 2025</p>
+                                <p class="text-secondary-custom leading-relaxed">Worked on traffic impact studies for projects in Tampa, St. Petersburg, Plant City, and Naples.</p>
+                            </div>
+                        </div>
+                    
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
   
 
     <section id="featured-projects" class="py-20 bg-white">
@@ -112,5 +278,52 @@
             <p>&copy; 2025 Richmond Owusu Duah. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Theme toggle functionality
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        function updateThemeIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+            } else {
+                themeToggleDarkIcon.classList.add('hidden');
+                themeToggleLightIcon.classList.remove('hidden');
+            }
+        }
+
+        updateThemeIcons();
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            updateThemeIcons();
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
