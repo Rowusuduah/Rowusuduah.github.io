@@ -43,7 +43,6 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
       "name": "Richmond Owusu Duah",
       "url": "https://rowusuduah.github.io/",
       "image": "https://rowusuduah.github.io/images/IMG_7067 (3).jpg",
@@ -148,6 +147,7 @@
         .filter-btn.active { @apply bg-primary-custom text-white; }
         .filter-btn:not(.active) { @apply bg-card-custom border border-custom hover:bg-primary-custom/10 hover:text-primary-custom; }
 
+
         /* Waving Hand Animation */
         .waving-hand {
             animation-name: wave-animation;
@@ -185,14 +185,20 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="font-heading text-xl font-bold text-primary-custom">Richmond O. Duah</a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about-me" class="hover:text-primary-custom transition-colors">About Me</a>
-                <a href="#work-experience" class="hover:text-primary-custom transition-colors">Work Experience</a>
-                <a href="#featured-projects" class="hover:text-primary-custom transition-colors">Featured Projects</a>
+                <a href="#about" class="hover:text-primary-custom transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary-custom transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary-custom transition-colors">Projects</a>
+                <a href="#leadership" class="hover:text-primary-custom transition-colors">Leadership</a>
+                <a href="#awards" class="hover:text-primary-custom transition-colors">Awards</a>
+                <a href="#education" class="hover:text-primary-custom transition-colors">Education</a>
+                <a href="#hobbies" class="hover:text-primary-custom transition-colors">Hobbies</a>
+                <a href="#gallery" class="hover:text-primary-custom transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-primary-custom transition-colors">Contact</a>
             </div>
             <div class="flex items-center space-x-4">
                 <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">
                     <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zM1 11a1 1 0 100-2H0a1 1 0 100 2h1zM4.227 15.773a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414l.707.707z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
                 </button>
                 <button id="mobile-menu-button" aria-label="Open mobile menu" class="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -200,129 +206,958 @@
             </div>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
-            <a href="#about-me" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">About Me</a>
-            <a href="#work-experience" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Work Experience</a>
-            <a href="#featured-projects" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Featured Projects</a>
+            <a href="#about" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">About</a>
+            <a href="#experience" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Experience</a>
+            <a href="#projects" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Projects</a>
+            <a href="#leadership" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Leadership</a>
+            <a href="#awards" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Awards</a>
+            <a href="#education" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Education</a>
+            <a href="#hobbies" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Hobbies</a>
+            <a href="#gallery" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Gallery</a>
+            <a href="#contact" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Contact</a>
         </div>
     </header>
 
     <main>
-        
         <!-- About Section -->
-        <section id="about-me" class="relative overflow-hidden pt-20 md:pt-24 pb-20 md:pb-32">
+        <section id="about" class="relative overflow-hidden pt-20 md:pt-24 pb-20 md:pb-32">
             <canvas class="section-canvas"></canvas>
             <div class="container mx-auto px-6 relative">
-                <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-custom leading-tight">
-                        Hi, I am Richmond Owusu Duah, a master's student in Civil Engineering (Transportation) at the University of South Florida, graduating in May 2026.
-                    </h1>
-                    <p class="text-xl text-secondary-custom mb-8 leading-relaxed max-w-3xl mx-auto">
-                        I have a strong interest in traffic impact studies, road safety, traffic signal timings, intersection sightline, site access, ITS planning and design, traffic theory, travel demand modelling, and data science. I leverage my technical knowledge, software skills, and passion for innovation to deliver practical solutions in transportation engineering. I am currently seeking a Traffic or ITS Engineering role where I can grow, contribute, and help develop smart mobility solutions.
-                    </p>
-                    
-                    <p class="text-lg text-secondary-custom/80 max-w-2xl mx-auto">
-                        Let us connect. I am always open to learning, collaboration, and new challenges in the transportation field.
-                    </p>
-                    
-                </div>
-            </div>
-        </section>
-  
-
-        <!-- Experience Section -->
-        <section id="work-experience" class="py-20 bg-card-custom">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-custom" data-aos="fade-up">Work Experience</h2>
-                <div class="max-w-4xl mx-auto">
-                    
-                        <div class="mb-12 last:mb-0" data-aos="fade-up" data-aos-delay="0">
-                            <div class="bg-card-custom border border-custom rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                                <h3 class="text-xl font-bold text-primary-custom mb-2">Transportation Engineering Intern</h3>
-                                <p class="font-semibold text-custom mb-1">Stantec · Tampa, FL</p>
-                                <p class="text-sm text-secondary-custom mb-4">Summer 2025</p>
-                                <p class="text-secondary-custom leading-relaxed">Worked on traffic impact studies for projects in Tampa, St. Petersburg, Plant City, and Naples.</p>
+                <div class="p-8 md:p-12 bg-card-custom/80 backdrop-blur-sm rounded-xl" data-aos="fade-up">
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <div class="lg:col-span-1 lg:border-r lg:border-custom lg:pr-8">
+                            <div class="sticky top-28 text-center lg:text-left">
+                                <div style="background-image: url('images/IMG_7067 (3).jpg'); background-position: 50% 40%;" class="bg-cover bg-no-repeat rounded-full shadow-2xl mx-auto w-48 h-48 lg:w-64 lg:h-64"></div>
+                                <div class="mt-6">
+                                    <p class="font-bold text-xl text-primary-custom">MSc Transportation Engineering Student</p>
+                                    <p class="text-secondary-custom mt-1">at the University of South Florida, Tampa FL</p>
+                                </div>
+                                <div class="mt-8 space-y-4 text-secondary-custom">
+                                    <div class="flex items-center justify-center lg:justify-start gap-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        <span>Tampa, FL, USA</span>
+                                    </div>
+                                    <div class="flex items-center justify-center lg:justify-start gap-4">
+                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                                        <span>University of South Florida</span>
+                                    </div>
+                                     <a href="mailto:richmondowusuduah@gmail.com" class="flex items-center justify-center lg:justify-start gap-4 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5 group-hover:text-primary-custom transition-colors"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                        <span class="group-hover:text-primary-custom transition-colors">Email</span>
+                                    </a>
+                                    <a href="https://www.github.com/Rowusuduah" target="_blank" class="flex items-center justify-center lg:justify-start gap-4 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5 group-hover:text-primary-custom transition-colors"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                        <span class="group-hover:text-primary-custom transition-colors">GitHub</span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/richmond-owusu-duah-6506321b6" target="_blank" class="flex items-center justify-center lg:justify-start gap-4 group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 w-5 h-5 group-hover:text-primary-custom transition-colors"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                        <span class="group-hover:text-primary-custom transition-colors">LinkedIn</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    
+                        <div class="lg:col-span-2">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-6 font-heading">About Me</h2>
+                            <div class="space-y-4 text-secondary-custom text-lg">
+                                <p>
+                                    <span class="waving-hand">👋</span> Hi, I am Richmond Owusu Duah, a master's student in Civil Engineering (Transportation) at the University of South Florida, graduating in May 2026.
+                                </p>
+                                <p>
+                                    I have a strong interest in traffic impact studies, road safety, traffic signal timings, intersection sightline, site access, ITS planning and design, traffic theory, travel demand modelling, and data science. I leverage my technical knowledge, software skills, and passion for innovation to deliver practical solutions in transportation engineering. I am currently seeking a Traffic or ITS Engineering role where I can grow, contribute, and help develop smart mobility solutions.
+                                </p>
+                                <p>
+                                    Let us connect. I am always open to learning, collaboration, and new challenges in the transportation field.
+                                </p>
+                            </div>
+
+                            <div class="mt-12">
+                                <h3 class="text-2xl font-bold mb-4 font-heading">Softwares</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="skill-tag">Synchro</span>
+                                    <span class="skill-tag">Cube</span>
+                                    <span class="skill-tag">Excel</span>
+                                    <span class="skill-tag">HCS</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">R</span>
+                                    <span class="skill-tag">SUMO</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h3 class="text-2xl font-bold mb-4 font-heading">Learning</h3>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="skill-tag">OpenRoads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-  
 
-    <section id="featured-projects" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                    <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-                        <h3 class="text-xl font-bold mb-4 text-gray-900">Sample Project</h3>
-                        <p class="text-gray-600 mb-4">Project description</p>
-                        <div class="flex flex-wrap gap-2">
+        <!-- Experience Section -->
+        <section id="experience" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Work Experience</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">My professional journey in the engineering field.</p>
+                </div>
+                <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                        <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
                             
-                                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Technology 1</span>
-                            
-                                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Technology 2</span>
-                            
+                            <!-- Stantec -->
+                            <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm2 4h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2a2 2 0 012-2z" /></svg>
+                                </div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-custom">Traffic Engineering Intern</h3>
+                                            <p class="font-semibold text-secondary-custom">Stantec · Tampa, FL</p>
+                                        </div>
+                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Summer 2025</time>
+                                    </div>
+                                    <div class="text-secondary-custom space-y-2 mt-4">
+                                        <p>Worked on traffic impact studies for projects in Tampa, St. Petersburg, Plant City, and Naples.</p>
+                                        <ul class="list-disc list-inside pl-2">
+                                            <li>Estimated site-generated trips using the ITE Trip Generation Manual (11th Edition)</li>
+                                            <li>Assigned traffic using the Districtwide FSUTMS model and existing volume patterns</li>
+                                            <li>Performed analysis with Synchro, Excel, and Google Earth</li>
+                                            <li>Evaluated turn lane warrants, signal spacing, and site access</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- University of South Florida -->
+                            <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                                </div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-custom">Graduate Teaching Assistant</h3>
+                                            <p class="font-semibold text-secondary-custom">University of South Florida</p>
+                                        </div>
+                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Aug 2024 – May 2025</time>
+                                    </div>
+                                    <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
+                                        <li>Grade assignments and exams for Civil Engineering undergraduates and provide student feedback.</li>
+                                        <li>Support students through office hours, providing personalized guidance and clarifying complex concepts.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Electrochem Ghana Limited -->
+                            <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /></svg>
+                                </div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-custom">Civil Engineer</h3>
+                                            <p class="font-semibold text-secondary-custom">Electrochem Ghana Limited</p>
+                                        </div>
+                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Jan 2021 – Aug 2024</time>
+                                    </div>
+                                    <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
+                                        <li>Supervised the construction of 10+ km of gravel roads, improving regional accessibility.</li>
+                                        <li>Conducted quality control inspections, ensuring compliance with engineering standards.</li>
+                                        <li>Assisted in the planning and execution of infrastructure improvements.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Department of Urban Roads -->
+                            <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                                <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /></svg>
+                                </div>
+                                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                    <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                        <div>
+                                            <h3 class="text-xl font-bold text-primary-custom">Assistant Civil Engineer</h3>
+                                            <p class="font-semibold text-secondary-custom">Department of Urban Roads · Ghana</p>
+                                        </div>
+                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Sep 2019 – Jan 2021</time>
+                                    </div>
+                                    <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
+                                        <li>Supervised road construction projects, including rehabilitation, asphalt overlays, and sectional repairs.</li>
+                                        <li>Conducted traffic count analyses and contributed to technical reports that informed data-driven roadway improvements.</li>
+                                        <li>Designed intersection layouts and highway alignments using AutoCAD Civil 3D.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="relative overflow-hidden py-20 md:py-32 bg-custom">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Featured Projects</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">A selection of my work in traffic engineering and research.</p>
+                </div>
+                <div class="flex justify-center flex-wrap gap-2 mb-12" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="School">School</button>
+                    <button class="filter-btn" data-filter="Work">Work</button>
+                </div>
+                <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-tags="Work,Synchro,VISSIM" data-title="Signal Timing Optimization" data-tools="Synchro 12, VISSIM" data-summary="Optimized signal timings for a coordinated network of 5 intersections in downtown Tampa, resulting in a projected 20% reduction in average vehicle delay and a 15% decrease in stops during peak hours. The project involved data collection, model calibration, and multiple scenario analyses.">
+                        <div class="bg-card-custom rounded-lg shadow-lg overflow-hidden border border-custom h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Signals" alt="Signal Timing Project" class="w-full h-48 object-cover">
+                            <div class="p-6 flex-grow">
+                                <h3 class="font-bold text-xl mb-2">Signal Timing Optimization</h3>
+                                <p class="text-secondary-custom text-sm mb-4">Reduced traffic delay by 20% through advanced signal coordination.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tool-tag">Synchro 12</span><span class="tool-tag">VISSIM</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <button class="view-project-btn w-full text-center bg-primary-custom/10 text-primary-custom font-bold py-2 px-4 rounded-lg hover:bg-primary-custom/20 transition-colors">View Details</button>
+                            </div>
                         </div>
                     </div>
-                
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-tags="School,SUMO,Python,TraCI" data-title="MFD Simulation for Urban Networks" data-tools="SUMO, Python, TraCI" data-summary="Developed a simulation framework to derive Macroscopic Fundamental Diagrams (MFDs) for the USF campus road network. This research helps in understanding network-level traffic dynamics and testing congestion mitigation strategies like perimeter control. The Python scripts automated simulation runs and data extraction via the TraCI interface.">
+                        <div class="bg-card-custom rounded-lg shadow-lg overflow-hidden border border-custom h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/10b981/ffffff?text=MFD" alt="MFD Simulation Project" class="w-full h-48 object-cover">
+                            <div class="p-6 flex-grow">
+                                <h3 class="font-bold text-xl mb-2">MFD Simulation</h3>
+                                <p class="text-secondary-custom text-sm mb-4">Analyzed network-level traffic flow using SUMO and Python.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tool-tag">SUMO</span><span class="tool-tag">Python</span><span class="tool-tag">TraCI</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <button class="view-project-btn w-full text-center bg-primary-custom/10 text-primary-custom font-bold py-2 px-4 rounded-lg hover:bg-primary-custom/20 transition-colors">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300" data-tags="Work,Synchro,HCS" data-title="Traffic Impact Analysis" data-tools="Synchro, HCS, ITE Trip Gen" data-summary="Conducted a comprehensive Traffic Impact Analysis (TIA) for a proposed medical campus on Immokalee Road. The study included trip generation, distribution, assignment, and capacity analysis to identify necessary roadway improvements and access management strategies to accommodate future traffic demand.">
+                        <div class="bg-card-custom rounded-lg shadow-lg overflow-hidden border border-custom h-full flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://placehold.co/600x400/f97316/ffffff?text=TIA" alt="TIA Project" class="w-full h-48 object-cover">
+                            <div class="p-6 flex-grow">
+                                <h3 class="font-bold text-xl mb-2">Traffic Impact Analysis</h3>
+                                <p class="text-secondary-custom text-sm mb-4">Assessed traffic impact for a new medical campus development.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="tool-tag">Synchro</span><span class="tool-tag">HCS</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <button class="view-project-btn w-full text-center bg-primary-custom/10 text-primary-custom font-bold py-2 px-4 rounded-lg hover:bg-primary-custom/20 transition-colors">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-  
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Leadership & Affiliations</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Engaging with the professional community.</p>
+                </div>
+                <!-- FIX: Justified list alignment -->
+                <div class="max-w-4xl mx-auto flex justify-center" data-aos="fade-up">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span><span class="font-semibold">Vice President</span> – ITE USF Student Chapter</span>
+                        </li>
+                         <li class="flex items-center gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span><span class="font-semibold">ITE Student Leadership Summit 2025</span> – Florida Atlantic University</span>
+                        </li>
+                         <li class="flex items-center gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span>Active member in ITE, ASCE, NSBE</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Awards Section -->
+        <section id="awards" class="relative overflow-hidden py-20 md:py-32">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Awards & Conferences</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Celebrating achievements and continuous learning.</p>
+                </div>
+                <!-- FIX: Justified list alignment -->
+                <div class="max-w-4xl mx-auto flex justify-center" data-aos="fade-up">
+                    <ul class="space-y-6">
+                        <li class="flex items-center gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-primary-custom flex-shrink-0"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <span><span class="font-semibold">CUTR Transportation Scholarship Award</span> (October 2024)</span>
+                        </li>
+                         <li class="flex items-center gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-primary-custom flex-shrink-0"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <span><span class="font-semibold">ITE Annual Meeting</span> Attendee (August 2025)</span>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Education</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">My academic background and qualifications.</p>
+                </div>
+                <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <h4 class="font-bold text-lg">Master of Science, Civil Engineering</h4>
+                                <p class="text-sm font-medium text-primary-custom mb-3">University of South Florida, Tampa, FL · May 2026</p>
+                                <div class="text-sm text-secondary-custom space-y-1">
+                                    <p><span class="font-semibold text-custom">Concentration:</span> Transportation Engineering</p>
+                                    <p><span class="font-semibold text-custom">GPA:</span> 4.0</p>
+                                    <p><span class="font-semibold text-custom">Coursework:</span> Traffic Systems, Traffic Flow Theory, Travel Demand Modelling, Data Science.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"></path><path d="m12 18 8-4-8-4-8 4 8 4Z"></path><path d="M6 12v5c0 5 4 5 6 5s6-0 6-5v-5"></path></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <h4 class="font-bold text-lg">Bachelor of Science, Civil Engineering</h4>
+                                <p class="text-sm font-medium text-primary-custom mb-3">Kwame Nkrumah University of Science and Technology, Ghana · June 2019</p>
+                                <div class="text-sm text-secondary-custom space-y-1">
+                                    <p><span class="font-semibold text-custom">Honors:</span> First Class</p>
+                                    <p><span class="font-semibold text-custom">Coursework:</span> Highway & Transportation Engineering, Pavement Design, Civil Engineering Design.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="relative overflow-hidden py-20 md:py-32">
+            <canvas class="section-canvas"></canvas>
+             <div class="container mx-auto px-6 relative">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Hobbies & Interests</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Outside of engineering, I enjoy exploring the world through different lenses.</p>
+                </div>
+                <div class="flex justify-center flex-wrap gap-8" data-aos="fade-up">
+                    <div class="text-center w-24">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-primary-custom"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 17.5h-5.5l1.5-3.5-3-3.5h3.5l2 3h3l2-5h-3.5"/></svg>
+                        <p>Cycling</p>
+                    </div>
+                     <div class="text-center w-24">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-primary-custom"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <p>Reading</p>
+                    </div>
+                     <div class="text-center w-24">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 text-primary-custom"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <p>Traveling</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteering Section -->
+        <section id="volunteering" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Volunteering</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Giving back to the community.</p>
+                </div>
+                <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent dark:before:via-slate-700">
+                        <!-- Feeding Tampa Bay -->
+                        <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary-custom">Volunteer</h3>
+                                        <p class="font-semibold text-secondary-custom">Feeding Tampa Bay (with Stantec)</p>
+                                    </div>
+                                    <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">June 2025</time>
+                                </div>
+                                <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
+                                    <li>Volunteered alongside Stantec colleagues to sort thousands of pounds of potatoes for families in need.</li>
+                                    <li>A meaningful opportunity to give back to the community and connect with teammates outside the office.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Engineering Expo -->
+                        <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary-custom">53rd Engineering Expo Volunteer</h3>
+                                        <p class="font-semibold text-secondary-custom">USF College of Engineering</p>
+                                    </div>
+                                    <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Feb 2025</time>
+                                </div>
+                                <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
+                                    <li>Guided K–12 students through interactive exhibits, showcasing applications of civil and transportation engineering.</li>
+                                    <li>Helped spark interest in STEM and contributed to an inspiring educational experience for young learners.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- The Hope Journey -->
+                        <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-custom bg-card-custom group-hover:border-primary-custom transition-colors text-primary-custom shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
+                                <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-primary-custom">Volunteer</h3>
+                                        <p class="font-semibold text-secondary-custom">The Hope Journey (NGO) - Ghana</p>
+                                    </div>
+                                    <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Nov 2022 - Jun 2023</time>
+                                </div>
+                                <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
+                                    <li>Supported education equity by assisting with logistics and outreach for a community-focused NGO.</li>
+                                    <li>Played a key role in distributing essential academic materials to hundreds of children in underserved rural areas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="relative overflow-hidden py-20 md:py-32">
+            <canvas class="section-canvas"></canvas>
+            <div class="container mx-auto px-6 relative">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Gallery</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Moments from fieldwork, conferences, and student life.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://placehold.co/500x500/3b82f6/ffffff?text=Fieldwork" alt="Fieldwork photo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://placehold.co/500x500/10b981/ffffff?text=Conference" alt="Conference photo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://placehold.co/500x500/f97316/ffffff?text=Expo" alt="Engineering Expo" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="https://placehold.co/500x500/ec4899/ffffff?text=Poster" alt="Poster Session" class="w-full h-full object-cover rounded-lg shadow-md cursor-pointer">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-custom">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Get In Touch</h2>
+                    <p class="text-secondary-custom mt-2 text-lg max-w-xl mx-auto">I'm always open to discussing new projects, research ideas, or opportunities in traffic engineering. Feel free to reach out!</p>
+                </div>
+                <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <form action="https://formspree.io/f/mvgrydkl" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-secondary-custom">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-secondary-custom">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 text-sm font-medium text-secondary-custom">Message</label>
+                            <textarea name="message" id="message" rows="4" placeholder="Your Message" class="form-input" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-primary-custom text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity shadow-lg">Send Message</button>
+                        </div>
+                    </form>
+                    <div class="flex justify-center items-center space-x-6 mt-8">
+                         <a href="https://www.linkedin.com/in/richmond-owusu-duah-6506321b6" target="_blank" class="contact-social-icon" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="https://www.github.com/Rowusuduah" target="_blank" class="contact-social-icon" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                        <a href="mailto:richmondowusuduah@gmail.com" class="contact-social-icon" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
+
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Richmond Owusu Duah. All rights reserved.</p>
+    <footer class="bg-slate-900 text-slate-400">
+        <div class="container mx-auto px-6 py-8 text-center">
+             <p>&copy; 2025 Richmond Owusu Duah. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="fixed bottom-8 right-8 bg-primary-custom text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 z-50 hover:opacity-90">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"></path><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div id="project-modal-content" class="bg-card-custom rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 relative transform scale-95 transition-transform duration-300">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-secondary-custom hover:text-custom transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 id="modal-title" class="text-2xl md:text-3xl font-bold mb-4 font-heading"></h3>
+            <div id="modal-tools" class="flex flex-wrap gap-2 mb-6"></div>
+            <div id="modal-summary" class="text-secondary-custom space-y-4"></div>
+        </div>
+    </div>
+    
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <button id="close-gallery-modal-btn" class="absolute top-4 right-4 text-white hover:opacity-80 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <img id="gallery-modal-image" src="" alt="Gallery image view" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl">
+    </div>
+
+
+    <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Main Application Script -->
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Initialize Libraries ---
+            AOS.init({
+                duration: 700,
+                once: true,
+                offset: 50,
+            });
 
-        // Theme toggle functionality
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+            // --- DOM Element Caching ---
+            const doc = document.documentElement;
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
+            const projectGrid = document.getElementById('project-grid');
+            const projectModal = document.getElementById('project-modal');
+            const galleryModal = document.getElementById('gallery-modal');
+            const galleryGrid = document.getElementById('gallery');
 
-        function updateThemeIcons() {
-            if (document.documentElement.classList.contains('dark')) {
-                themeToggleDarkIcon.classList.remove('hidden');
-                themeToggleLightIcon.classList.add('hidden');
-            } else {
-                themeToggleDarkIcon.classList.add('hidden');
-                themeToggleLightIcon.classList.remove('hidden');
+            // --- Theme Toggle ---
+            const updateThemeIcons = (isDark) => {
+                darkIcon.classList.toggle('hidden', isDark);
+                lightIcon.classList.toggle('hidden', !isDark);
+            };
+            themeToggleBtn.addEventListener('click', () => {
+                const isDark = doc.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateThemeIcons(isDark);
+                // Re-initialize animations to adapt to new theme colors
+                animations.forEach(anim => anim.init());
+            });
+            updateThemeIcons(doc.classList.contains('dark'));
+
+
+            // --- Mobile Menu ---
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // --- Scroll Events ---
+            window.addEventListener('scroll', () => {
+                scrollToTopBtn.classList.toggle('opacity-0', window.scrollY <= 300);
+                scrollToTopBtn.classList.toggle('translate-y-4', window.scrollY <= 300);
+            });
+            scrollToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            // --- Modals (Project & Gallery) ---
+            const setupModal = (modalEl, openSelector, closeSelector) => {
+                const contentEl = modalEl.querySelector(':scope > div');
+                const closeBtn = modalEl.querySelector(closeSelector);
+
+                const openModal = (contentSetup) => {
+                    if(contentSetup) contentSetup();
+                    modalEl.classList.remove('hidden');
+                    setTimeout(() => contentEl.classList.remove('scale-95'), 10);
+                };
+                
+                const closeModal = () => {
+                    contentEl.classList.add('scale-95');
+                    setTimeout(() => modalEl.classList.add('hidden'), 300);
+                };
+
+                document.addEventListener('click', (e) => {
+                    const openBtn = e.target.closest(openSelector);
+                    if (openBtn) {
+                        if (modalEl.id === 'project-modal') {
+                            const card = openBtn.closest('.project-card');
+                            openModal(() => {
+                                modalEl.querySelector('#modal-title').textContent = card.dataset.title;
+                                modalEl.querySelector('#modal-summary').innerHTML = `<p>${card.dataset.summary.replace(/\n/g, '</p><p>')}</p>`;
+                                const toolsContainer = modalEl.querySelector('#modal-tools');
+                                toolsContainer.innerHTML = '';
+                                card.dataset.tools.split(', ').forEach(tool => {
+                                    const toolEl = document.createElement('span');
+                                    toolEl.className = 'tool-tag';
+                                    toolEl.textContent = tool;
+                                    toolsContainer.appendChild(toolEl);
+                                });
+                            });
+                        } else if (modalEl.id === 'gallery-modal') {
+                             openModal(() => {
+                                 modalEl.querySelector('#gallery-modal-image').src = openBtn.src;
+                               });
+                        }
+                    }
+                });
+
+                closeBtn.addEventListener('click', closeModal);
+                modalEl.addEventListener('click', (e) => e.target === modalEl && closeModal());
+                return closeModal;
+            };
+
+            const closeProjectModal = setupModal(projectModal, '.view-project-btn', '#close-modal-btn');
+            const closeGalleryModal = setupModal(galleryModal, '.gallery-item img', '#close-gallery-modal-btn');
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (!projectModal.classList.contains('hidden')) closeProjectModal();
+                    if (!galleryModal.classList.contains('hidden')) closeGalleryModal();
+                }
+            });
+
+            // --- Project Filtering ---
+            const filterContainer = document.querySelector('.filter-btn').parentElement;
+            const projectCards = Array.from(projectGrid.children);
+            filterContainer.addEventListener('click', (e) => {
+                const button = e.target.closest('.filter-btn');
+                if (!button) return;
+
+                filterContainer.querySelector('.active').classList.remove('active');
+                button.classList.add('active');
+                const filter = button.dataset.filter;
+
+                projectCards.forEach(card => {
+                    card.style.display = (filter === 'all' || card.dataset.tags.includes(filter)) ? 'block' : 'none';
+                });
+            });
+
+            // --- Traffic Simulation Animation ---
+            class TrafficAnimation {
+                constructor(canvas) {
+                    this.canvas = canvas;
+                    this.ctx = this.canvas.getContext('2d');
+                    this.lastTime = 0;
+                    this.animate = this.animate.bind(this);
+                    this.init();
+                }
+
+                init() {
+                    const parent = this.canvas.parentElement;
+                    this.canvas.width = parent.offsetWidth;
+                    this.canvas.height = parent.offsetHeight;
+                    
+                    this.roadWidth = 30;
+                    this.vehicleSize = { w: 16, h: 8 };
+                    this.stopLineOffset = this.roadWidth / 2 + 5;
+                    this.detectionDistance = 150;
+                    this.carColors = ['#3b82f6'];
+
+                    this.roads = [
+                        { pos: this.canvas.width * 0.2, vertical: true, dir: 'down' },
+                        { pos: this.canvas.width * 0.8, vertical: true, dir: 'up' },
+                        { pos: this.canvas.height * 0.2, vertical: false, dir: 'right' },
+                        { pos: this.canvas.height * 0.8, vertical: false, dir: 'left' },
+                    ];
+
+                    this.intersections = this.roads.filter(r => r.vertical).flatMap(vRoad => 
+                        this.roads.filter(r => !r.vertical).map(hRoad => ({
+                            x: vRoad.pos,
+                            y: hRoad.pos,
+                            light: new TrafficLight(vRoad.pos, hRoad.pos)
+                        }))
+                    );
+                    
+                    this.vehicles = this.roads.flatMap((road, i) => {
+                        const length = road.vertical ? this.canvas.height : this.canvas.width;
+                        return Array.from({length: 10}, () => new Vehicle(i, 'car', Math.random() * length, this));
+                    });
+                }
+
+                animate(timestamp) {
+                    if (!this.lastTime) this.lastTime = timestamp;
+                    const deltaTime = timestamp - this.lastTime;
+                    this.lastTime = timestamp;
+
+                    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                    this.drawRoads();
+                    this.drawStopLines();
+
+                    this.intersections.forEach(intersection => {
+                        let verticalQueue = 0;
+                        let horizontalQueue = 0;
+                        this.vehicles.forEach(vehicle => {
+                            if (vehicle.type === 'car' && vehicle.isStopped) {
+                                if (vehicle.road.vertical && vehicle.road.pos === intersection.x) {
+                                    if (Math.abs(vehicle.pos - intersection.y) < this.detectionDistance) verticalQueue++;
+                                } else if (!vehicle.road.vertical && vehicle.road.pos === intersection.y) {
+                                     if (Math.abs(vehicle.pos - intersection.x) < this.detectionDistance) horizontalQueue++;
+                                }
+                            }
+                        });
+                        intersection.light.update(deltaTime, verticalQueue, horizontalQueue);
+                        intersection.light.draw(this.ctx, this.roadWidth);
+                    });
+
+                    this.vehicles.forEach(vehicle => {
+                        vehicle.update();
+                        vehicle.draw(this.ctx);
+                    });
+
+                    requestAnimationFrame(this.animate);
+                }
+                
+                drawRoads() {
+                    const roadColor = getComputedStyle(document.documentElement).getPropertyValue('--road-color').trim();
+                    this.ctx.strokeStyle = roadColor;
+                    this.ctx.lineWidth = this.roadWidth;
+                    this.ctx.lineCap = 'round';
+                    this.roads.forEach(road => {
+                        this.ctx.beginPath();
+                        if (road.vertical) {
+                            this.ctx.moveTo(road.pos, 0);
+                            this.ctx.lineTo(road.pos, this.canvas.height);
+                        } else {
+                            this.ctx.moveTo(0, road.pos);
+                            this.ctx.lineTo(this.canvas.width, road.pos);
+                        }
+                        this.ctx.stroke();
+                    });
+                }
+
+                drawStopLines() {
+                    this.ctx.strokeStyle = doc.classList.contains('dark') ? 'rgba(255, 255, 255, 0.1)' : 'rgba(203, 213, 225, 0.5)';
+                    this.ctx.lineWidth = 2;
+                    this.intersections.forEach(intersection => {
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x - this.roadWidth/2, intersection.y - this.stopLineOffset);
+                        this.ctx.lineTo(intersection.x + this.roadWidth/2, intersection.y - this.stopLineOffset);
+                        this.ctx.stroke();
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x - this.roadWidth/2, intersection.y + this.stopLineOffset);
+                        this.ctx.lineTo(intersection.x + this.roadWidth/2, intersection.y + this.stopLineOffset);
+                        this.ctx.stroke();
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x - this.stopLineOffset, intersection.y - this.roadWidth/2);
+                        this.ctx.lineTo(intersection.x - this.stopLineOffset, intersection.y + this.roadWidth/2);
+                        this.ctx.stroke();
+                        this.ctx.beginPath();
+                        this.ctx.moveTo(intersection.x + this.stopLineOffset, intersection.y - this.roadWidth/2);
+                        this.ctx.lineTo(intersection.x + this.stopLineOffset, intersection.y + this.roadWidth/2);
+                        this.ctx.stroke();
+                    });
+                }
             }
-        }
 
-        updateThemeIcons();
+            class TrafficLight {
+                constructor(x, y) {
+                    this.x = x;
+                    this.y = y;
+                    this.state = Math.random() > 0.5 ? 0 : 2; // 0: V_GREEN, 1: V_YELLOW, 2: H_GREEN, 3: H_YELLOW, 4: ALL_RED
+                    this.timer = 0;
+                    this.minGreenTime = 3000;
+                    this.maxGreenTime = 10000;
+                    this.yellowTime = 1500;
+                    this.allRedTime = 500;
+                }
 
-        themeToggleBtn.addEventListener('click', function() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
+                update(deltaTime, verticalQueue, horizontalQueue) {
+                    this.timer += deltaTime;
+                    switch(this.state) {
+                        case 0: if ((this.timer > this.minGreenTime && horizontalQueue > 0) || this.timer > this.maxGreenTime) { this.state = 1; this.timer = 0; } break;
+                        case 1: if (this.timer > this.yellowTime) { this.state = 4; this.timer = 0; this.prevState = 1; } break;
+                        case 2: if ((this.timer > this.minGreenTime && verticalQueue > 0) || this.timer > this.maxGreenTime) { this.state = 3; this.timer = 0; } break;
+                        case 3: if (this.timer > this.yellowTime) { this.state = 4; this.timer = 0; this.prevState = 3; } break;
+                        case 4: if (this.timer > this.allRedTime) { this.state = this.prevState === 1 ? 2 : 0; this.timer = 0; } break;
+                    }
+                }
+
+                draw(ctx, roadWidth) {
+                    const lightSize = 6;
+                    let vColor, hColor;
+                    switch(this.state) {
+                        case 0: vColor = '#22c55e'; hColor = '#ef4444'; break;
+                        case 1: vColor = '#facc15'; hColor = '#ef4444'; break;
+                        case 2: vColor = '#ef4444'; hColor = '#22c55e'; break;
+                        case 3: vColor = '#ef4444'; hColor = '#facc15'; break;
+                        case 4: vColor = '#ef4444'; hColor = '#ef4444'; break;
+                    }
+                    ctx.fillStyle = vColor;
+                    ctx.fillRect(this.x - roadWidth / 2 - lightSize - 2, this.y - roadWidth / 2 - lightSize - 2, lightSize, lightSize);
+                    ctx.fillRect(this.x + roadWidth / 2 + 2, this.y + roadWidth / 2 + 2, lightSize, lightSize);
+                    ctx.fillStyle = hColor;
+                    ctx.fillRect(this.x + roadWidth / 2 + 2, this.y - roadWidth / 2 - lightSize - 2, lightSize, lightSize);
+                    ctx.fillRect(this.x - roadWidth / 2 - lightSize - 2, this.y + roadWidth / 2 + 2, lightSize, lightSize);
+                }
             }
-            updateThemeIcons();
-        });
 
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+            class Vehicle {
+                constructor(roadIndex, type = 'car', initialPos, animation) {
+                    this.animation = animation;
+                    this.roadIndex = roadIndex;
+                    this.road = this.animation.roads[roadIndex];
+                    this.pos = initialPos;
+                    this.type = type;
+                    this.laneOffset = 0;
+                    this.isStopped = false;
+                    this.isHighBeam = true;
 
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
+                    if (this.type === 'ambulance') {
+                        this.speed = 1.8;
+                        this.color = '#ffffff';
+                    } else {
+                        this.speed = (Math.random() * 0.8 + 0.6);
+                        this.color = this.animation.carColors[0];
+                    }
+                }
+
+                update() {
+                    this.isStopped = false;
+                    let isYielding = false;
+                    this.isHighBeam = true;
+                    
+                    if (this.type === 'car') {
+                        for (const intersection of this.animation.intersections) {
+                            if ((this.road.vertical && this.road.pos !== intersection.x) || (!this.road.vertical && this.road.pos !== intersection.y)) continue;
+                            const light = intersection.light;
+                            const stopPoint = this.road.vertical ? intersection.y : intersection.x;
+                            const stopDist = this.road.dir === 'down' || this.road.dir === 'right' ? stopPoint - (this.animation.stopLineOffset + this.animation.vehicleSize.w / 2) : stopPoint + (this.animation.stopLineOffset + this.animation.vehicleSize.w / 2);
+                            const dist = this.road.dir === 'down' || this.road.dir === 'right' ? stopDist - this.pos : this.pos - stopDist;
+                            if (dist < 0 && dist > -this.speed * 2) {
+                                const canGo = (this.road.vertical && light.state === 0) || (!this.road.vertical && light.state === 2);
+                                if (!canGo) { this.pos = stopDist; this.isStopped = true; break; }
+                            }
+                        }
+
+                        if (!this.isStopped) {
+                            const safetyGap = this.animation.vehicleSize.w * 1.5;
+                            for (const other of this.animation.vehicles) {
+                                if (this === other || this.roadIndex !== other.roadIndex) continue;
+                                let distance = (this.road.dir === 'down' || this.road.dir === 'right') ? other.pos - this.pos : this.pos - other.pos;
+                                if (other.type === 'ambulance' && distance > 0 && distance < 300) {
+                                    isYielding = true;
+                                }
+                                if (distance > 0 && distance < safetyGap) { this.isStopped = true; this.isHighBeam = false; break; }
+                            }
+                        }
+                    }
+                    
+                    const targetOffset = isYielding ? (this.animation.roadWidth / 4) : 0;
+                    this.laneOffset += (targetOffset - this.laneOffset) * 0.1;
+
+                    if (!this.isStopped) {
+                        const currentSpeed = isYielding ? this.speed * 0.5 : this.speed;
+                        if (this.road.dir === 'up' || this.road.dir === 'left') this.pos -= currentSpeed;
+                        else this.pos += currentSpeed;
+                    }
+                    
+                    const length = this.road.vertical ? this.animation.canvas.height : this.animation.canvas.width;
+                    const isOffScreen = (this.road.dir === 'down' || this.road.dir === 'right') ? this.pos > length + 50 : this.pos < -50;
+                    if (isOffScreen) {
+                        const myIndex = this.animation.vehicles.findIndex(v => v === this);
+                        if (myIndex !== -1) {
+                            this.animation.vehicles[myIndex] = new Vehicle(this.roadIndex, 'car', (this.road.dir === 'down' || this.road.dir === 'right') ? -50 : length + 50, this.animation);
+                        }
+                    }
+                }
+
+                draw(ctx) {
+                    ctx.save();
+                    let xPos = this.road.vertical ? this.road.pos + this.laneOffset : this.pos;
+                    let yPos = this.road.vertical ? this.pos : this.road.pos + this.laneOffset;
+                    ctx.translate(xPos, yPos);
+                    if (this.road.dir === 'down') ctx.rotate(Math.PI / 2);
+                    else if (this.road.dir === 'up') ctx.rotate(-Math.PI / 2);
+                    else if (this.road.dir === 'left') ctx.rotate(Math.PI);
+                    ctx.fillStyle = this.color;
+                    ctx.fillRect(-this.animation.vehicleSize.w / 2, -this.animation.vehicleSize.h / 2, this.animation.vehicleSize.w, this.animation.vehicleSize.h);
+                    if (this.type === 'ambulance') {
+                        ctx.fillStyle = '#ef4444';
+                        ctx.fillRect(-3, -2, 6, 4);
+                        ctx.fillRect(-2, -3, 4, 6);
+                    }
+                    if (doc.classList.contains('dark')) {
+                        const highBeam = this.type === 'ambulance' || this.isHighBeam;
+                        const beamLength = highBeam ? 60 : 30;
+                        const beamWidth = highBeam ? 25 : 20;
+                        const beamOpacity = highBeam ? 0.25 : 0.15;
+                        const gradient = ctx.createLinearGradient(this.animation.vehicleSize.w / 2, 0, this.animation.vehicleSize.w / 2 + beamLength, 0);
+                        gradient.addColorStop(0, `rgba(255, 255, 255, ${beamOpacity})`);
+                        gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+                        ctx.fillStyle = gradient;
+                        ctx.beginPath();
+                        ctx.moveTo(this.animation.vehicleSize.w / 2, -this.animation.vehicleSize.h / 2);
+                        ctx.lineTo(this.animation.vehicleSize.w / 2 + beamLength, -beamWidth / 2);
+                        ctx.lineTo(this.animation.vehicleSize.w / 2 + beamLength, beamWidth / 2);
+                        ctx.lineTo(this.animation.vehicleSize.w / 2, this.animation.vehicleSize.h / 2);
+                        ctx.closePath();
+                        ctx.fill();
+                    }
+                    ctx.restore();
+                }
+            }
+
+            let animations = [];
+            document.querySelectorAll('.section-canvas').forEach(canvas => {
+                const anim = new TrafficAnimation(canvas);
+                animations.push(anim);
+                setInterval(() => {
+                    if (anim.vehicles.some(v => v.type === 'ambulance')) return;
+                    const randomIndex = Math.floor(Math.random() * anim.vehicles.length);
+                    const oldVehicle = anim.vehicles[randomIndex];
+                    anim.vehicles[randomIndex] = new Vehicle(oldVehicle.roadIndex, 'ambulance', oldVehicle.pos, anim);
+                }, 12000);
+            });
+
+            animations.forEach(anim => anim.animate(0));
+
+            window.addEventListener('resize', () => {
+                animations.forEach(anim => anim.init());
+            });
         });
     </script>
 </body>
