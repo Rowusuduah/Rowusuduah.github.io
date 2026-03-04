@@ -191,6 +191,7 @@
                 <a href="#projects" class="hover:text-primary-custom transition-colors">Projects</a>
                 <a href="#leadership" class="hover:text-primary-custom transition-colors">Leadership</a>
                 <a href="#awards" class="hover:text-primary-custom transition-colors">Awards</a>
+                <a href="#certifications" class="hover:text-primary-custom transition-colors">Certifications</a>
                 <a href="#education" class="hover:text-primary-custom transition-colors">Education</a>
                 <a href="#hobbies" class="hover:text-primary-custom transition-colors">Hobbies</a>
                 <a href="#volunteering" class="hover:text-primary-custom transition-colors">Volunteering</a>
@@ -217,6 +218,7 @@
             <a href="#projects" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Projects</a>
             <a href="#leadership" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Leadership</a>
             <a href="#awards" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Awards</a>
+            <a href="#certifications" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Certifications</a>
             <a href="#education" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Education</a>
             <a href="#hobbies" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Hobbies</a>
             <a href="#volunteering" class="block text-center py-2 rounded-md hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors">Volunteering</a>
@@ -266,7 +268,8 @@
                                     </a>
                                 </div>
                                 <!-- Resume Download -->
-                                <a href="#" id="resume-download-btn" class="mt-8 flex items-center justify-center gap-2 w-full bg-primary-custom text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity shadow-lg">
+                                <!-- TODO: Update href to your hosted resume URL or a relative path like "Richmond_Owusu_Duah_Resume.pdf" -->
+                                <a href="Richmond_Owusu_Duah_Resume.pdf" target="_blank" id="resume-download-btn" class="mt-8 flex items-center justify-center gap-2 w-full bg-primary-custom text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition-opacity shadow-lg">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                                     Download Resume
                                 </a>
@@ -303,8 +306,8 @@
                                 <div>
                                     <p class="text-xs font-semibold uppercase tracking-widest text-secondary-custom mb-3">GIS, CAD & Design</p>
                                     <div class="flex flex-wrap gap-3">
-                                        <span class="skill-tag">ArcGIS</span>
-                                        <span class="skill-tag">AutoCAD Civil 3D</span>
+                                        <span class="skill-tag">ArcGIS Pro</span>
+                                        <span class="skill-tag">AutoCAD</span>
                                         <span class="skill-tag">Google Earth Pro</span>
                                         <span class="skill-tag">OpenRoads</span>
                                     </div>
@@ -315,8 +318,15 @@
                                     <div class="flex flex-wrap gap-3">
                                         <span class="skill-tag">Python</span>
                                         <span class="skill-tag">R</span>
-                                        <span class="skill-tag">Excel</span>
                                         <span class="skill-tag">TraCI</span>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs font-semibold uppercase tracking-widest text-secondary-custom mb-3">Documentation & Review</p>
+                                    <div class="flex flex-wrap gap-3">
+                                        <span class="skill-tag">Bluebeam Revu</span>
+                                        <span class="skill-tag">Microsoft Office Suite</span>
                                     </div>
                                 </div>
 
@@ -353,18 +363,35 @@
                                     <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
                                         <div>
                                             <h3 class="text-xl font-bold text-primary-custom">Traffic Engineering Intern</h3>
-                                            <p class="font-semibold text-secondary-custom">Stantec · Tampa, FL</p>
+                                            <p class="font-semibold text-secondary-custom">Stantec Consulting Services Inc. · Tampa, FL</p>
                                         </div>
-                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Summer 2025</time>
+                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">May 2025 – Present</time>
                                     </div>
-                                    <div class="text-secondary-custom space-y-2 mt-4">
-                                        <p>Worked on traffic impact studies for projects in Tampa, St. Petersburg, Plant City, and Naples.</p>
-                                        <ul class="list-disc list-inside pl-2">
-                                            <li>Estimated site-generated trips using the ITE Trip Generation Manual (11th Edition)</li>
-                                            <li>Assigned traffic using the Districtwide FSUTMS model and existing volume patterns</li>
-                                            <li>Performed analysis with Synchro, Excel, and Google Earth</li>
-                                            <li>Evaluated turn lane warrants, signal spacing, and site access</li>
-                                        </ul>
+                                    <div class="text-secondary-custom space-y-4 mt-4">
+                                        <div>
+                                            <p class="font-semibold text-custom text-sm mb-1">Traffic Impact Analysis & Operational Evaluation</p>
+                                            <ul class="list-disc list-inside pl-2 space-y-1">
+                                                <li>Prepare Traffic Impact Analyses for commercial and medical developments across Florida (Tampa, Naples, Lakeland, Plant City, Bushnell).</li>
+                                                <li>Perform trip generation and distribution analysis using the ITE Trip Generation Manual.</li>
+                                                <li>Develop and update Synchro models to evaluate level of service, control delay, and intersection performance under existing, background, and future conditions.</li>
+                                                <li>Evaluate site access configurations, driveway spacing, and signal warrant criteria per FDOT and municipal standards.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-custom text-sm mb-1">Parking Studies & Access Management</p>
+                                            <ul class="list-disc list-inside pl-2 space-y-1">
+                                                <li>Prepare parking demand analyses using ITE and Urban Land Institute methodologies.</li>
+                                                <li>Contributed to the Lakeland Regional Health Ambulatory Surgical Center Parking Study.</li>
+                                                <li>Analyze corridor access modifications including conversion of full median openings to directional openings.</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold text-custom text-sm mb-1">Corridor Operations & Traffic Safety Analysis</p>
+                                            <ul class="list-disc list-inside pl-2 space-y-1">
+                                                <li>Support corridor-level operations study evaluating ~40 intersections in Cape Coral.</li>
+                                                <li>Review crash data and develop safety improvement recommendations consistent with FDOT guidance and the Highway Safety Manual.</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -378,13 +405,14 @@
                                     <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
                                         <div>
                                             <h3 class="text-xl font-bold text-primary-custom">Graduate Teaching Assistant</h3>
-                                            <p class="font-semibold text-secondary-custom">University of South Florida</p>
+                                            <p class="font-semibold text-secondary-custom">Dept. of Civil & Environmental Engineering, USF</p>
                                         </div>
-                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Aug 2024 – May 2025</time>
+                                        <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Aug 2024 – Present</time>
                                     </div>
                                     <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
-                                        <li>Grade assignments and exams for Civil Engineering undergraduates and provide student feedback.</li>
-                                        <li>Support students through office hours, providing personalized guidance and clarifying complex concepts.</li>
+                                        <li>Teach and lead laboratory sessions for ~75 undergraduate students in Introduction to Design Graphics, covering engineering drawing principles and CAD fundamentals.</li>
+                                        <li>Grade assignments for Probability & Statistics, Professional & Ethical Issues in Engineering, and Mechanics of Materials.</li>
+                                        <li>Provide academic support and personalized guidance during office hours.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -398,14 +426,15 @@
                                     <div class="flex flex-col sm:flex-row justify-between items-start mb-2">
                                         <div>
                                             <h3 class="text-xl font-bold text-primary-custom">Civil Engineer</h3>
-                                            <p class="font-semibold text-secondary-custom">Electrochem Ghana Limited</p>
+                                            <p class="font-semibold text-secondary-custom">Electrochem Ghana Limited · Ghana</p>
                                         </div>
                                         <time class="font-medium text-sm text-secondary-custom shrink-0 mt-2 sm:mt-0">Jan 2021 – Aug 2024</time>
                                     </div>
                                     <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
-                                        <li>Supervised the construction of 10+ km of gravel roads, improving regional accessibility.</li>
-                                        <li>Conducted quality control inspections, ensuring compliance with engineering standards.</li>
-                                        <li>Assisted in the planning and execution of infrastructure improvements.</li>
+                                        <li>Supervised construction of gravel access roads and internal roadway networks across a 41,000-acre concession supporting large-scale salt production.</li>
+                                        <li>Oversaw construction of earth embankments, containment dikes, reservoirs, floodgates, and bittern canal systems for water control and salt harvesting infrastructure.</li>
+                                        <li>Coordinated with mechanical, chemical, and production engineers during installation of pump systems and supporting civil infrastructure.</li>
+                                        <li>Conducted site inspections and quality assurance reviews to ensure compliance with engineering standards, material specifications, and safety regulations.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -425,8 +454,7 @@
                                     </div>
                                     <ul class="list-disc list-inside text-secondary-custom space-y-2 mt-4 pl-2">
                                         <li>Supervised road construction projects, including rehabilitation, asphalt overlays, and sectional repairs.</li>
-                                        <li>Conducted traffic count analyses and contributed to technical reports that informed data-driven roadway improvements.</li>
-                                        <li>Designed intersection layouts and highway alignments using AutoCAD Civil 3D.</li>
+                                        <li>Supported transportation planning efforts by conducting traffic count analyses and contributing to technical reports that informed data-driven decision-making for roadway improvements.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -515,17 +543,29 @@
                 <!-- FIX: Justified list alignment -->
                 <div class="max-w-4xl mx-auto flex justify-center" data-aos="fade-up">
                     <ul class="space-y-6">
-                        <li class="flex items-center gap-3 text-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            <span><span class="font-semibold">Vice President</span> – ITE USF Student Chapter</span>
+                        <li class="flex items-start gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span>
+                                <span class="font-semibold">Institute of Transportation Engineers (ITE), USF Chapter</span><br>
+                                <span class="text-base text-secondary-custom">President (Jan 2026 – Present) · Vice President (Apr 2025 – Dec 2025) · Student Member (Aug 2024 – Apr 2025)</span>
+                            </span>
                         </li>
-                         <li class="flex items-center gap-3 text-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            <span><span class="font-semibold">ITE Student Leadership Summit 2025</span> – Florida Atlantic University</span>
+                        <li class="flex items-start gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span>
+                                <span class="font-semibold">Tau Beta Pi Engineering Honor Society</span> – Florida Gamma Chapter<br>
+                                <span class="text-base text-secondary-custom">Member (November 2025 – Present)</span>
+                            </span>
                         </li>
-                         <li class="flex items-center gap-3 text-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            <span>Active member in ITE, ASCE, NSBE</span>
+                        <li class="flex items-start gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span>
+                                <span class="font-semibold">ITE Student Leadership Summit 2025</span> – Florida Atlantic University
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0 mt-0.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            <span>Active member – ASCE &amp; NSBE, USF Chapters</span>
                         </li>
                     </ul>
                 </div>
@@ -545,9 +585,13 @@
                     <ul class="space-y-6">
                         <li class="flex items-center gap-3 text-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-primary-custom flex-shrink-0"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
-                            <span><span class="font-semibold">CUTR Transportation Scholarship Award</span> (October 2024)</span>
+                            <span><span class="font-semibold">Anne Brewer Academic Scholarship</span>, ITS Florida (November 2025)</span>
                         </li>
-                         <li class="flex items-center gap-3 text-lg">
+                        <li class="flex items-center gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-primary-custom flex-shrink-0"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+                            <span><span class="font-semibold">CUTR Master's Scholarship</span>, Center for Urban Transportation Research (October 2024)</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-lg">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="text-primary-custom flex-shrink-0"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
                             <span><span class="font-semibold">ITE Annual Meeting</span> Attendee (August 2025)</span>
                         </li>
@@ -556,6 +600,34 @@
             </div>
         </section>
         
+        <!-- Certifications Section -->
+        <section id="certifications" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading">Certifications</h2>
+                    <p class="text-secondary-custom mt-2 text-lg">Professional development and technical training.</p>
+                </div>
+                <div class="max-w-4xl mx-auto flex justify-center" data-aos="fade-up">
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0 mt-0.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                            <span>
+                                <span class="font-semibold">GTSITE Synchro Training (16 PDH)</span><br>
+                                <span class="text-base text-secondary-custom">Iteris · April 2025</span>
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-3 text-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary-custom flex-shrink-0 mt-0.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                            <span>
+                                <span class="font-semibold">Bentley CUBE v6.5.1 Introduction (Fundamentals)</span><br>
+                                <span class="text-base text-secondary-custom">June 2025</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section id="education" class="relative overflow-hidden py-20 md:py-32 bg-card-custom border-y border-custom">
             <div class="container mx-auto px-6">
@@ -585,7 +657,7 @@
                             </div>
                             <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-custom p-6 rounded-lg border border-custom shadow-md hover:shadow-xl transition-shadow">
                                 <h4 class="font-bold text-lg">Bachelor of Science, Civil Engineering</h4>
-                                <p class="text-sm font-medium text-primary-custom mb-3">Kwame Nkrumah University of Science and Technology, Ghana · June 2019</p>
+                                <p class="text-sm font-medium text-primary-custom mb-3">Kwame Nkrumah University of Science and Technology, Kumasi, Ghana · Summer 2019</p>
                                 <div class="text-sm text-secondary-custom space-y-1">
                                     <p><span class="font-semibold text-custom">Honors:</span> First Class</p>
                                     <p><span class="font-semibold text-custom">Coursework:</span> Highway & Transportation Engineering, Pavement Design, Civil Engineering Design.</p>
