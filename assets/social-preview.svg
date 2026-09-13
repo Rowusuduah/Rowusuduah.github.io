@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="title desc">
+<title id="title">Richmond Owusu Duah — Civil Engineer at Stantec</title>
+<desc id="desc">Professional portfolio in transportation and traffic engineering, with a portrait of Richmond Owusu Duah.</desc>
+<rect width="1200" height="630" fill="#0b1220"/>
+<path d="M65 89H1135M65 551H1135" stroke="#27364c"/>
+<path d="M65 88H151" stroke="#83afff" stroke-width="3"/>
+<rect x="776" y="135" width="360" height="360" rx="10" fill="#27364c"/>
+<clipPath id="portrait-clip"><rect x="780" y="139" width="352" height="352" rx="7"/></clipPath>
+<image x="780" y="139" width="352" height="352" xlink:href="images/headshot-800.webp" clip-path="url(#portrait-clip)"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="65" y="57" font-size="17" letter-spacing="2" fill="#a8b6cc">PROFESSIONAL PORTFOLIO</text>
+<text x="65" y="161" font-size="19" font-weight="600" letter-spacing="1" fill="#83afff">CIVIL ENGINEER · STANTEC</text>
+<g font-size="77" font-weight="600" letter-spacing="-2" fill="#edf2fa"><text x="61" y="259">Richmond</text><text x="61" y="351">Owusu Duah</text></g>
+<text x="65" y="418" font-size="27" fill="#a8b6cc">Transportation &amp; Traffic Engineering</text>
+<text x="65" y="472" font-size="21" fill="#a8b6cc">Tampa, Florida</text>
+<text x="65" y="596" font-size="21" fill="#83afff">rowusuduah.github.io</text>
+<text x="716" y="596" font-size="16" letter-spacing="1" fill="#a8b6cc">EXPERIENCE / PROJECTS / RESEARCH</text>
+</g></svg>

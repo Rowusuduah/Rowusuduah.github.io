@@ -1,0 +1,45 @@
+{
+  "verifiedDate": "2026-09-13",
+  "purpose": "Identify Richmond Owusu Duah’s current employer and educational institutions in his professional portfolio. Do not imply institutional endorsement. Marks remain the property of their respective owners.",
+  "assets": [
+    {
+      "organization": "Stantec",
+      "file": "stantec.svg",
+      "sourceUrl": "https://www.stantec.com/en",
+      "assetUrl": "https://www.stantec.com/content/dam/stantec/images/logos/logo.svg",
+      "brandUsageUrl": "https://www.stantec.com/en/copyright",
+      "width": 173,
+      "height": 45.9,
+      "format": "SVG",
+      "notes": "Current official website header logo, downloaded through browser page asset export. Original monochrome artwork and internal SVG styles preserved. No scripts, event handlers, or external resource references.",
+      "bytes": 3221,
+      "sha256": "a0470675768674462fa6c4937929ff50ad8e2f578762228a7438375b172bb96b"
+    },
+    {
+      "organization": "University of South Florida",
+      "file": "usf.png",
+      "sourceUrl": "https://www.usf.edu/ucm/marketing/email-signatures.aspx",
+      "assetUrl": "https://www.usf.edu/ucm/images/marketing/logos/email-sigs/bull-u-usf-240x60.png",
+      "brandUsageUrl": "https://www.usf.edu/ucm/marketing/editorial-style-guide-visual-brand.aspx",
+      "width": 240,
+      "height": 60,
+      "format": "PNG",
+      "notes": "Official university Bull-U and wordmark lockup from the public Communications and Marketing download page. Original green/gold color artwork on white background. Use a white plate; ideal rendered width 120 CSS pixels for 2x density. The page approves this variant for email signatures; source provenance is not a blanket reuse license.",
+      "bytes": 9412,
+      "sha256": "479ffd17f27989e7c9937b17690e94cca430be8b5af8bcb2671c4dd8add78f74"
+    },
+    {
+      "organization": "Kwame Nkrumah University of Science and Technology",
+      "file": "knust-crest.jpg",
+      "sourceUrl": "https://www.knust.edu.gh/about/knust/emblem",
+      "assetUrl": "https://www.knust.edu.gh/sites/default/files/inline-images/KNUST_logo-Vector_0.jpg",
+      "brandUsageUrl": "https://www.knust.edu.gh/about/knust/emblem",
+      "width": 350,
+      "height": 442,
+      "format": "JPEG",
+      "notes": "Original full-color official university emblem, on white background. Keep its proportions; use a white plate. No separate public brand usage guide was found. The current horizontal website logo was rejected because its supplied artwork obscures the wordmark.",
+      "bytes": 105305,
+      "sha256": "b8803226c3dd1d7edd0980b323119d1efd4f1468eafad62dd3c2d2de03bb8153"
+    }
+  ]
+}

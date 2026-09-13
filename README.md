@@ -22,6 +22,8 @@ The preview runs at `http://127.0.0.1:8126`. Set `PORT` to use another port. Ref
 - `assets/images/`: resized, metadata-free WebP headshots and responsive transportation photographs.
 - `credits.html` and `assets/images/projects/credits.json`: attribution, original sources, licenses, and metadata for all five real photographs.
 - `assets/fonts/`: locally hosted Manrope with its SIL Open Font License notice. Obtained from `@fontsource-variable/manrope@5.2.8`.
+- `assets/brands/`: original Stantec, USF, and KNUST marks with official-source provenance; displayed locally on white plates.
+- `assets/social-preview.svg` / `.png`: the shared 1200 × 630 link-preview design. Canonical URLs, social tags, and public profile JSON-LD are described in `docs/METADATA-AND-IDENTITY.md`.
 
 GitHub Pages publishes the repository root on `main`. `.nojekyll` is intentional. Pushes should pass `node scripts/check.mjs` and desktop/mobile browser review first.
 

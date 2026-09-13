@@ -1,6 +1,9 @@
 (() => {
   'use strict';
   const root = document.documentElement;
+  const overviewTitle = document.title;
+  const descriptionMeta = document.querySelector('meta[name="description"]');
+  const overviewDescription = descriptionMeta.content;
   const views = [...document.querySelectorAll('[data-view]')];
   const navigation = document.querySelector('#navigation');
   const sidebar = document.querySelector('#sidebar');
@@ -77,10 +80,13 @@
       if (link.hash === `#${active.id}`) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
-    document.querySelector('#current-view').textContent = active.dataset.title;
-    document.title = active.id === 'overview'
-      ? 'Richmond Owusu Duah | Transportation Engineering'
-      : `${active.dataset.title} | Richmond Owusu Duah`;
+    document.querySelector('#current-view').textContent = active.dataset.label || active.dataset.title;
+    const projectHeading = target?.matches('.project-card') ? target.querySelector('h2')?.textContent.trim() : null;
+    document.title = active.id === 'overview' ? overviewTitle : `${projectHeading || active.dataset.title} | Richmond Owusu Duah`;
+    const viewDescription = projectHeading
+      ? target.querySelector('.project-body > p:not(.project-location)')?.textContent
+      : active.dataset.description || active.querySelector('.page-heading > p:last-child')?.textContent;
+    descriptionMeta.content = active.id === 'overview' ? overviewDescription : (viewDescription || overviewDescription).replace(/\s+/g, ' ').trim();
     currentView = active.id;
     currentHash = location.hash;
     handledURL = location.href;

@@ -631,3 +631,59 @@ summary::-webkit-details-marker { display: none; }
   .hero-portrait { box-shadow: none; }
   article { break-inside: avoid; }
 }
+/* Organization identity and readable professional metadata. */
+.brand-plate { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 176px; height: 76px; padding: 16px; border: 1px solid #e2e7ee; border-radius: 7px; background: #fff; }
+.brand-plate img { display: block; width: 140px; max-width: 100%; height: auto; object-fit: contain; }
+.brand-plate:hover { border-color: var(--blue); }
+.brand-knust { width: 86px; height: 96px; padding: 13px; }
+.brand-knust img { width: auto; height: 68px; }
+.brand-usf img { width: 144px; }
+.brand-stantec img { width: 138px; }
+.employer-heading { gap: 24px; }
+.employer-heading h2 { line-height: 1.4; }
+.employer-heading .brand-plate { width: 168px; height: 74px; }
+.employer-heading .eyebrow { font-size: .8125rem; letter-spacing: .04em; }
+.badge { font-size: .8125rem; letter-spacing: 0; }
+.degree-top { align-items: center; margin-bottom: 25px; min-height: 96px; }
+.degree-top .brand-usf { height: 96px; }
+.degree-date { display: grid; gap: 3px; margin-left: auto; color: var(--text); font-size: 1rem; font-weight: 650; text-align: right; font-variant-numeric: tabular-nums; }
+.degree-date span { color: var(--subtle); font-size: .8125rem; font-weight: 450; }
+.degree-card { background: linear-gradient(150deg, var(--panel-alt), var(--panel) 50%); }
+.degree-card h2 { max-width: none; font-size: 1.375rem; line-height: 1.4; }
+.degree-card .organization { font-size: 1rem; line-height: 1.6; margin: 13px 0 23px; }
+.organization a:hover { text-decoration: underline; }
+.institution-location { display: block; margin-top: 3px; color: var(--subtle); font-size: .875rem; }
+.degree-facts { display: flex; flex-wrap: wrap; gap: 15px 40px; }
+.degree-facts dt { color: var(--subtle); font-size: .8125rem; margin-bottom: 4px; }
+.degree-facts dd { color: var(--text); font-size: 1rem; font-weight: 550; }
+.coursework { margin-top: 24px; padding-top: 20px; }
+.coursework h3 { font-size: .9375rem; font-weight: 600; margin-bottom: 12px; }
+.coursework ul { gap: 8px; }
+.coursework li { font-size: .875rem; padding: 5px 9px; border-color: transparent; border-radius: 4px; line-height: 1.6; }
+.affiliation-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; justify-content: space-between; margin-bottom: 24px; }
+.affiliation-heading .brand-plate { width: 154px; height: 70px; padding: 14px; }
+.affiliation-heading .badge { white-space: nowrap; }
+.history-date .brand-plate { width: 148px; height: 66px; padding: 13px; margin-top: 18px; }
+.capability-icon { width: 26px; height: 26px; color: var(--blue); margin-bottom: 16px; }
+.skill-card { background: linear-gradient(160deg, var(--panel-alt), var(--panel) 68%); }
+.skill-card h3 { line-height: 1.55; }
+.training-list p, .list-date, .role-progression p { font-variant-numeric: tabular-nums; }
+@media (max-width: 1180px) and (min-width: 961px) {
+  .degree-card { padding: 28px 30px; }
+}
+@media (max-width: 720px) {
+  .employer-heading { flex-wrap: wrap; gap: 18px; }
+  .employer-heading > div { flex-basis: 100%; }
+  .degree-top { gap: 18px; }
+  .degree-card h2 { font-size: 1.25rem; }
+  .degree-facts { gap: 16px 28px; }
+  .history-date { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+  .history-date .brand-plate { margin-top: 0; }
+}
+@media (max-width: 380px) {
+  .degree-top .brand-usf { width: 140px; padding: 12px; height: 80px; }
+  .degree-date { font-size: .875rem; }
+  .degree-date span { font-size: .75rem; }
+  .degree-top { gap: 10px; }
+  .degree-card { padding: 20px; }
+}

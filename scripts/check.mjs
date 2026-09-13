@@ -103,6 +103,42 @@ function checkPolicy(html, pageTags, path) {
   }
 }
 
+function checkMetadata(html, pageTags, path) {
+  const name = relative(root, path);
+  const canonical = pageTags.filter(item => item.tag === 'link' && item.attrs.rel === 'canonical');
+  assert.equal(canonical.length, 1, `${name}: one canonical URL required`);
+  const expectedUrl = 'https://rowusuduah.github.io/' + (name === 'index.html' ? '' : name);
+  assert.equal(canonical[0].attrs.href, expectedUrl, `${name}: incorrect canonical URL`);
+  const meta = key => {
+    const matches = pageTags.filter(item => item.tag === 'meta' && (item.attrs.name === key || item.attrs.property === key));
+    assert.equal(matches.length, 1, `${name}: missing or duplicate ${key}`);
+    assert.ok(matches[0].attrs.content, `${name}: empty ${key}`);
+    return matches[0].attrs.content;
+  };
+  const title = decode(html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? '');
+  assert.equal(meta('og:title'), title, `${name}: social title does not match document title`);
+  assert.equal(meta('twitter:title'), title, `${name}: card title does not match document title`);
+  assert.equal(meta('og:description'), meta('description'), `${name}: social description mismatch`);
+  assert.equal(meta('twitter:description'), meta('description'), `${name}: card description mismatch`);
+  assert.equal(meta('og:url'), expectedUrl, `${name}: social URL mismatch`);
+  assert.equal(meta('author'), 'Richmond Owusu Duah');
+  assert.equal(meta('twitter:card'), 'summary_large_image');
+  assert.equal(meta('og:image:type'), 'image/png');
+  const socialUrl = meta('og:image');
+  assert.equal(meta('twitter:image'), socialUrl);
+  assert.equal(meta('og:image:secure_url'), socialUrl);
+  const imageUrl = new URL(socialUrl);
+  assert.equal(imageUrl.origin, 'https://rowusuduah.github.io');
+  const imagePath = localReference(imageUrl.pathname, path, { runtime: true });
+  const png = readFileSync(imagePath);
+  assert.equal(png.toString('ascii', 1, 4), 'PNG');
+  assert.equal(png.readUInt32BE(16), Number(meta('og:image:width')));
+  assert.equal(png.readUInt32BE(20), Number(meta('og:image:height')));
+  assert.ok(meta('og:image:alt').includes('Richmond'));
+  assert.ok(meta('twitter:image:alt').includes('Richmond'));
+  assert.ok(pageTags.some(item => item.tag === 'link' && item.attrs.rel === 'apple-touch-icon'));
+}
+
 for (const name of pages) {
   const path = resolve(root, name), html = read(path), pageTags = tags(html);
   ids(path);
@@ -110,6 +146,7 @@ for (const name of pages) {
   assert.ok(pageTags.some(item => item.tag === 'h1'), `${name}: main heading missing`);
   assert.ok(pageTags.some(item => item.tag === 'html' && item.attrs.lang), `${name}: document language missing`);
   checkPolicy(html, pageTags, path);
+  checkMetadata(html, pageTags, path);
   for (const { tag, attrs } of pageTags) {
     assert.ok(!Object.keys(attrs).some(key => /^on[a-z]+/.test(key)), `${name}: inline event handler`);
     if (tag === 'a' && attrs.target === '_blank') assert.ok(attrs.rel?.split(/\s+/).includes('noopener'), `${name}: external tab missing noopener`);
@@ -134,6 +171,16 @@ for (const name of pages) {
 }
 
 const indexPath = resolve(root, 'index.html'), index = read(indexPath);
+const profileData = JSON.parse(index.match(/<script type="application\/ld\+json" id="profile-data">([\s\S]*?)<\/script>/)?.[1] ?? 'null');
+assert.equal(profileData?.['@type'], 'ProfilePage', 'Structured profile is missing');
+assert.equal(profileData.mainEntity?.['@type'], 'Person');
+assert.equal(profileData.mainEntity.name, 'Richmond Owusu Duah');
+assert.equal(profileData.mainEntity.jobTitle, 'Civil Engineer');
+assert.equal(profileData.mainEntity.worksFor?.name, 'Stantec');
+assert.equal(profileData.mainEntity.alumniOf?.length, 2);
+for (const key of ['email', 'telephone', 'address', 'birthDate', 'homeLocation', 'honorificSuffix']) {
+  assert.ok(!(key in profileData.mainEntity), `Do not add private or unconfirmed profile metadata: ${key}`);
+}
 for (const id of ['overview', 'experience', 'projects', 'research', 'education', 'leadership', 'contact']) assert.ok(ids(indexPath).has(id), `Missing portfolio view #${id}`);
 assert.ok(!/MSc Candidate|Graduating May/i.test(index), 'Outdated graduate-student status');
 assert.equal((index.match(/data-project-category=/g) ?? []).length, 22, 'Preserve all 22 professional assignments');
@@ -177,6 +224,19 @@ for (const photo of credits.photos) {
     assert.equal(statSync(path).size, file.bytes, `${file.file}: update attribution file metadata after reprocessing`);
   }
 }
+
+const brandSourcePath = resolve(root, 'assets/brands/sources.json');
+const brandSources = JSON.parse(read(brandSourcePath));
+assert.equal(brandSources.assets.length, 3, 'Keep provenance for all three organization marks');
+for (const brand of brandSources.assets) {
+  const path = localReference(brand.file, brandSourcePath, { runtime: true });
+  const asset = readFileSync(path);
+  assert.equal(asset.length, brand.bytes, `${brand.file}: original logo size changed`);
+  assert.equal(createHash('sha256').update(asset).digest('hex'), brand.sha256, `${brand.file}: original logo changed`);
+  assert.ok(brand.sourceUrl.startsWith('https://') && brand.assetUrl.startsWith('https://'));
+  if (extname(path) === '.svg') assert.ok(!/<script\b|\son\w+\s*=|(?:xlink:)?href\s*=\s*["'](?!#)/i.test(asset.toString()), 'Logo SVG must not contain scripts or external resources');
+}
+console.log('PASS canonical/social metadata, structured public profile, preview dimensions, and official-logo provenance');
 eagerAssets.add(indexPath);
 const estimatedTransfer = [...eagerAssets].reduce((total, path) => {
   const data = readFileSync(path);
