@@ -340,7 +340,7 @@
       if (this.pauseButton) {
         this.pauseButton.disabled = globallyPaused;
         this.pauseButton.setAttribute('aria-pressed', String(this.localPaused || globallyPaused));
-        this.pauseButton.textContent = this.localPaused ? 'Resume sequence' : 'Pause sequence';
+        this.pauseButton.textContent = globallyPaused ? 'Motion paused' : this.localPaused ? 'Resume sequence' : 'Pause sequence';
       }
       if (!this.status) return;
       const current = phases[this.phase];

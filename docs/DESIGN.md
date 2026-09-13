@@ -21,3 +21,13 @@ The portfolio presents Richmond Owusu Duah as an early-career transportation eng
 ## Validation
 
 Check every view at desktop and mobile widths, browser navigation/deep links, project filtering and disclosures, keyboard behavior, theme and motion controls, image credits, asset loading, privacy boundaries, and a print-ready résumé.
+
+## September 2026 review implementation
+
+The main body type is 16px (1rem), metadata is 12–15px, and headings use moderate letter spacing. Manrope remains self-hosted. Avoid shrinking text to make more content fit; use the focused views, search, and native disclosures instead.
+
+Project search and category filters cover all 22 assignments, including the additional-project register. Matching additional assignments open automatically. Featured project URLs use stable `#project-*` anchors and open their contribution details. Browser Back/Forward restores the reading position within the current visit.
+
+The mobile header uses 44px controls and collapses the résumé label on small screens. Each active view has a primary heading; navigation moves keyboard focus to that heading. The original no-JavaScript content fallback, reduced-motion handling, and manual animation controls remain.
+
+The separate résumé and credits pages use external local stylesheets. Resume screen styles use the same font family and readable text scale; print-specific rules remain unchanged. Do not add external script, font, tracking, or form dependencies.

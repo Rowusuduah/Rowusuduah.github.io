@@ -32,8 +32,8 @@
     scrim.hidden = !open;
     sidebar.inert = compact.matches && !open;
     workspace.inert = open;
-    if (open) navigation.querySelector('[aria-current]')?.focus();
-    else if (restoreFocus) menuButton.focus();
+    if (open) navigation.querySelector('[aria-current]')?.focus({ preventScroll: true });
+    else if (restoreFocus) menuButton.focus({ preventScroll: true });
   }
   menuButton.addEventListener('click', () => setMenu(!root.classList.contains('nav-open'), true));
   scrim.addEventListener('click', () => setMenu(false, true));
@@ -50,13 +50,29 @@
     }
   });
 
-  function route() {
-    let hash;
-    try { hash = decodeURIComponent(location.hash.slice(1)); } catch { hash = ''; }
-    const id = aliases[hash] || hash || 'overview';
-    const active = views.find(view => view.id === id) || views[0];
-    const changed = currentView && currentView !== active.id;
-    views.forEach(view => { view.hidden = view !== active; });
+  const scrollPositions = new Map();
+  let currentHash;
+  let handledURL;
+  function resolveTarget(hash) {
+    let id;
+    try { id = decodeURIComponent(hash.replace(/^#/, '')); } catch { id = ''; }
+    return document.getElementById(aliases[id] || id || 'overview');
+  }
+  function route({ restore = false, initial = false } = {}) {
+    if (currentHash !== undefined) scrollPositions.set(currentHash, window.scrollY);
+    const target = resolveTarget(location.hash);
+    const active = target?.closest('[data-view]') || views[0];
+    const changed = currentView !== active.id;
+    if (target?.matches('[data-project-category]')) {
+      searchInput.value = '';
+      selectedCategory = 'all';
+      applyFilters();
+      target.querySelector('details').open = true;
+    }
+    views.forEach(view => {
+      view.hidden = view !== active;
+      view.classList.remove('view-enter');
+    });
     navigation.querySelectorAll('a').forEach(link => {
       if (link.hash === `#${active.id}`) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
@@ -66,27 +82,32 @@
       ? 'Richmond Owusu Duah | Transportation Engineering'
       : `${active.dataset.title} | Richmond Owusu Duah`;
     currentView = active.id;
+    currentHash = location.hash;
+    handledURL = location.href;
     setMenu(false);
-    window.scrollTo({ top: 0, behavior: 'instant' });
-    if (changed) {
-      active.querySelector('h1,h2')?.focus({ preventScroll: true });
-    }
+    if (changed && !initial) active.classList.add('view-enter');
+    const detailTarget = target && target !== active && active.contains(target) ? target : null;
+    const heading = (detailTarget || active).querySelector('h1,h2,h3');
+    if (!initial || detailTarget) heading?.focus({ preventScroll: true });
+    if (restore && scrollPositions.has(currentHash)) {
+      window.scrollTo({ top: scrollPositions.get(currentHash), behavior: 'instant' });
+    } else if (detailTarget) {
+      detailTarget.scrollIntoView({ block: 'start', behavior: 'instant' });
+    } else window.scrollTo({ top: 0, behavior: 'instant' });
     document.dispatchEvent(new CustomEvent('portfolio:view', { detail: { view: active.id } }));
   }
-  window.addEventListener('hashchange', route);
-  window.addEventListener('popstate', route);
+  window.addEventListener('popstate', () => route({ restore: true }));
+  window.addEventListener('hashchange', () => {
+    // History navigation also emits hashchange; handle it only once.
+    if (handledURL !== location.href) route();
+  });
   document.addEventListener('click', event => {
     const link = event.target.closest('a[href^="#"]');
     if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    const target = link.hash.slice(1);
-    if (!views.some(view => view.id === (aliases[target] || target))) return;
+    if (!resolveTarget(link.hash)?.closest('[data-view]')) return;
     event.preventDefault();
     if (location.hash !== link.hash) history.pushState(null, '', link.hash);
     route();
-  });
-  // Re-clicking the current section closes the mobile drawer too.
-  navigation.addEventListener('click', event => {
-    if (event.target.closest('a')?.hash === `#${currentView}`) setMenu(false, true);
   });
 
   function updateTheme() {
@@ -118,19 +139,54 @@
 
   const filters = [...document.querySelectorAll('[data-project-filter]')];
   const cards = [...document.querySelectorAll('[data-project-category]')];
-  filters.forEach(button => button.addEventListener('click', () => {
-    const category = button.dataset.projectFilter;
-    filters.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-    let shown = 0;
+  const searchInput = document.querySelector('#project-search');
+  const clearSearch = document.querySelector('#clear-search');
+  const register = document.querySelector('#project-register');
+  const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’']/g, '');
+  const projectText = new Map(cards.map(card => [card, normalize(card.textContent)]));
+  let selectedCategory = 'all';
+  let registerWasOpen = false;
+  let filtering = false;
+
+  function applyFilters() {
+    const tokens = normalize(searchInput.value).trim().split(/\s+/).filter(Boolean);
+    const activeFilter = tokens.length > 0 || selectedCategory !== 'all';
+    if (activeFilter && !filtering) registerWasOpen = register.open;
+    let featured = 0, additional = 0;
     cards.forEach(card => {
-      card.hidden = category !== 'all' && card.dataset.projectCategory !== category;
-      if (!card.hidden) shown++;
+      const categoryMatch = selectedCategory === 'all' || card.dataset.projectCategory === selectedCategory;
+      const textMatch = tokens.every(token => projectText.get(card).includes(token));
+      card.hidden = !categoryMatch || !textMatch;
+      if (!card.hidden) {
+        if (card.classList.contains('project-card')) featured++;
+        else additional++;
+      }
     });
-    document.querySelector('#project-count').textContent = `${shown} ${shown === 1 ? 'project' : 'projects'}`;
+    filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.projectFilter === selectedCategory)));
+    const count = featured + additional;
+    document.querySelector('#project-count').textContent = `${count} ${count === 1 ? 'assignment' : 'assignments'} · ${featured} featured · ${additional} additional`;
+    document.querySelector('#register-count').textContent = `${additional} additional ${additional === 1 ? 'assignment' : 'assignments'} in development review, parking, access, and transportation planning.`;
+    document.querySelector('#project-empty').hidden = count > 0;
+    document.querySelector('#project-results').hidden = featured === 0;
+    register.hidden = additional === 0;
+    if (activeFilter) register.open = additional > 0;
+    else if (filtering) register.open = registerWasOpen;
+    clearSearch.hidden = searchInput.value.length === 0;
+    filtering = activeFilter;
+  }
+  filters.forEach(button => button.addEventListener('click', () => {
+    selectedCategory = button.dataset.projectFilter;
+    applyFilters();
   }));
+  searchInput.addEventListener('input', applyFilters);
+  clearSearch.addEventListener('click', () => {
+    searchInput.value = '';
+    applyFilters();
+    searchInput.focus();
+  });
   root.classList.add('js-ready');
   updateTheme();
   updateMotion();
-  route();
+  route({ initial: true });
   setMenu(false);
 })();

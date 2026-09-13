@@ -1,0 +1,143 @@
+
+    :root { color-scheme: light; --paper: #f3f6fa; --ink: #14263f; --muted: #52647b; --accent: #1855b8; --line: #d7e0eb; --white: #ffffff; }
+    * { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body { margin: 0; color: var(--ink); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+    a:hover { color: var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+    .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 2; padding: .6rem 1rem; background: var(--ink); color: white; }
+    .skip-link:focus { top: 1rem; }
+    .toolbar { max-width: 1120px; margin: auto; padding: 27px 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; font-size: .88rem; }
+    .toolbar a { text-decoration: none; font-weight: 600; }
+    .toolbar a span { margin-right: .55rem; }
+    button { font: inherit; font-weight: 600; cursor: pointer; border: 1px solid var(--ink); border-radius: 5px; background: var(--ink); color: var(--white); padding: .75rem 1.15rem; }
+    button:hover { background: #23466f; }
+    button[hidden] { display: none; }
+    .resume { max-width: 1056px; margin: 0 auto 50px; background: var(--white); border: 1px solid var(--line); }
+    .resume-page { padding: 58px 64px 54px; }
+    .resume-page + .resume-page { border-top: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 18px; color: var(--accent); text-transform: uppercase; font-size: .69rem; letter-spacing: .15em; font-weight: 750; }
+    h1 { margin: 0; font-size: clamp(2.1rem, 5vw, 3.45rem); line-height: 1.08; letter-spacing: -.055em; font-weight: 680; }
+    .subtitle { margin: 17px 0 14px; font-size: 1.13rem; font-weight: 600; }
+    .contact { display: flex; flex-wrap: wrap; gap: 7px 19px; font-size: .83rem; color: var(--muted); }
+    .intro { max-width: 770px; margin: 27px 0 34px; font-size: 1rem; line-height: 1.7; }
+    .columns { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 46px; }
+    h2 { margin: 0 0 22px; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+    h3 { font-size: .98rem; line-height: 1.4; letter-spacing: -.015em; margin: 0; font-weight: 700; }
+    p { margin: 0 0 12px; }
+    .role { margin-bottom: 23px; break-inside: avoid; }
+    .role:last-child { margin-bottom: 0; }
+    .organization { margin: 3px 0 0; font-weight: 600; font-size: .86rem; }
+    .date { margin: 3px 0 8px; color: var(--muted); font-size: .76rem; }
+    .role p:last-child { font-size: .85rem; line-height: 1.65; margin: 0; }
+    aside { border-left: 1px solid var(--line); padding-left: 28px; }
+    aside section + section { margin-top: 30px; }
+    aside h2 { margin-bottom: 17px; }
+    aside p { font-size: .8rem; line-height: 1.6; }
+    aside .school { font-size: .85rem; font-weight: 650; }
+    aside .degree { margin-bottom: 4px; }
+    .education-item + .education-item { margin-top: 21px; }
+    .skill { margin-bottom: 14px; }
+    .skill strong { display: block; font-size: .78rem; margin-bottom: 3px; }
+    .skill p { margin: 0; color: var(--muted); }
+    .page-heading { margin-bottom: 28px; }
+    .page-heading h2 { margin-bottom: 10px; }
+    .page-heading p { margin: 0; font-size: 1.8rem; line-height: 1.25; letter-spacing: -.035em; font-weight: 650; }
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 23px 34px; margin-bottom: 34px; }
+    .project { border-top: 1px solid var(--line); padding-top: 13px; break-inside: avoid; }
+    .project .location { color: var(--muted); font-size: .75rem; margin: 3px 0 7px; }
+    .project p:last-child { font-size: .83rem; line-height: 1.65; margin: 0; }
+    .research { padding: 24px 27px; border: 1px solid var(--line); background: var(--paper); margin-bottom: 32px; break-inside: avoid; }
+    .research h2 { margin-bottom: 12px; }
+    .research h3 { font-size: 1rem; max-width: 700px; }
+    .research p { font-size: .84rem; margin-top: 10px; margin-bottom: 11px; }
+    .research a { font-size: .8rem; font-weight: 600; }
+    .recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+    .recognition-grid h2 { margin-bottom: 15px; }
+    .recognition-grid ul { list-style: none; padding: 0; margin: 0; }
+    .recognition-grid li { margin-bottom: 13px; font-size: .81rem; line-height: 1.6; break-inside: avoid; }
+    .recognition-grid li strong { font-weight: 650; }
+    .recognition-grid li span { color: var(--muted); display: block; font-size: .75rem; }
+    .document-footer { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 31px; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: .72rem; }
+    .screen-note { max-width: 1056px; margin: -27px auto 40px; padding: 0 10px; color: var(--muted); font-size: .75rem; text-align: center; }
+    @media (max-width: 720px) {
+      .toolbar { padding: 20px; font-size: .8rem; }
+      .resume { margin: 0 12px 36px; }
+      .resume-page { padding: 34px 25px; }
+      .columns { grid-template-columns: 1fr; gap: 32px; }
+      aside { border-left: 0; border-top: 1px solid var(--line); padding: 26px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+      aside section + section { margin-top: 0; }
+      .intro { margin-bottom: 27px; }
+      .project-grid, .recognition-grid { grid-template-columns: 1fr; gap: 23px; }
+      .research { padding: 21px; }
+      .document-footer { display: block; }
+      .document-footer span { display: block; margin-bottom: 4px; }
+      .screen-note { margin-top: -18px; padding: 0 25px; }
+    }
+    @media (max-width: 420px) {
+      aside { grid-template-columns: 1fr; }
+      .toolbar { gap: 10px; padding: 17px 14px; }
+      button { padding: .65rem .85rem; }
+      .resume-page { padding: 30px 21px; }
+    }
+    @page { size: letter; margin: 13mm 14mm; }
+    @media print {
+      :root { --paper: #fff; --white: #fff; --ink: #14263f; --muted: #43556c; --line: #cbd5e1; }
+      html, body { background: white; }
+      body { font-size: 10pt; line-height: 1.4; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .toolbar, .screen-note, .skip-link { display: none; }
+      .resume { width: auto; max-width: none; margin: 0; border: 0; }
+      .resume-page { padding: 0; break-after: page; }
+      .resume-page:last-child { break-after: auto; }
+      .resume-page + .resume-page { border: 0; }
+      .eyebrow { font-size: 7pt; margin-bottom: 13px; }
+      h1 { font-size: 32pt; }
+      .subtitle { font-size: 12pt; margin: 12px 0 9px; }
+      .contact { font-size: 8pt; gap: 5px 18px; }
+      a { text-decoration: none; }
+      .intro { font-size: 9.6pt; line-height: 1.6; margin: 18px 0 18px; }
+      .columns { display: grid; grid-template-columns: minmax(0, 1fr) 194px; gap: 28px; }
+      h2 { font-size: 7.4pt; margin-bottom: 16px; }
+      h3 { font-size: 10pt; }
+      .role { margin-bottom: 16px; }
+      .organization { font-size: 9pt; }
+      .date { font-size: 8pt; margin-bottom: 6px; }
+      .role p:last-child { font-size: 9pt; line-height: 1.55; }
+      aside { display: block; border-left: 1px solid var(--line); border-top: 0; padding: 0 0 0 21px; }
+      aside section + section { margin-top: 20px; }
+      aside p { font-size: 8.5pt; line-height: 1.5; }
+      aside .school { font-size: 9pt; }
+      .skill { margin-bottom: 10px; }
+      .skill strong { font-size: 8.5pt; }
+      .page-heading { margin-bottom: 21px; }
+      .page-heading p { font-size: 21pt; }
+      .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 19px 28px; margin-bottom: 26px; }
+      .project { padding-top: 10px; }
+      .project .location { font-size: 8pt; }
+      .project p:last-child { font-size: 9pt; line-height: 1.55; }
+      .research { padding: 18px 21px; margin-bottom: 24px; }
+      .research h3 { font-size: 10pt; }
+      .research p { font-size: 9pt; line-height: 1.55; }
+      .research a { font-size: 8.5pt; }
+      .recognition-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+      .recognition-grid li { font-size: 8.7pt; line-height: 1.5; margin-bottom: 12px; }
+      .recognition-grid li span { font-size: 8pt; }
+      .document-footer { display: flex; font-size: 7.3pt; margin-top: 22px; padding-top: 13px; }
+    }
+  
+@font-face { font-family: Manrope; src: url('fonts/manrope-latin.woff2') format('woff2'); font-weight: 200 800; font-style: normal; font-display: swap; }
+@media screen {
+  body { font-family: Manrope, 'Segoe UI', sans-serif; }
+  h1 { letter-spacing: -.035em; line-height: 1.15; }
+  h2, .eyebrow { font-size: .8125rem; letter-spacing: .08em; }
+  h3 { font-size: 1.125rem; }
+  .role p:last-child, aside p, .project p:last-child, .research p, .recognition-grid li { font-size: 1rem; line-height: 1.75; }
+  .organization, aside .school, .contact, .skill strong, .research a { font-size: .9375rem; }
+  .date, .project .location, .recognition-grid li span, .screen-note, .document-footer { font-size: .875rem; }
+  .columns { grid-template-columns: minmax(0, 1fr) 270px; gap: 36px; }
+  .toolbar a, .toolbar button { min-height: 44px; display: inline-flex; align-items: center; }
+  .resume-page { padding: 48px; }
+}
+@media screen and (max-width: 850px) { .columns { grid-template-columns: 1fr; } aside { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; } }
+@media screen and (max-width: 600px) { .resume-page { padding: 28px 22px; } .toolbar { flex-wrap: wrap; } }

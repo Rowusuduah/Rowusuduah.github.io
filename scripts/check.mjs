@@ -12,6 +12,7 @@ const pages = readdirSync(root).filter(name => name.endsWith('.html'));
 const textCache = new Map(), idsCache = new Map();
 const references = new Set(), eagerAssets = new Set();
 const privacyRules = [
+  ['unearned credential', /\bEIT\b|Engineer[- ]in[- ]Training|\b(?:passed|completed) (?:the )?FE (?:exam|examination)/i],
   ['email address or direct contact link', /\b(?:mailto:|tel:)|\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i],
   ['private contact metadata', /\b(?:telephone|streetAddress|postalCode)\b/i],
   ['phone number', /\b\d{3}[-.\s]\d{3}[-.\s]\d{4}\b/],
@@ -79,7 +80,7 @@ function checkCss(css, from, eager = false) {
 function checkPolicy(html, pageTags, path) {
   const csp = pageTags.find(item => item.tag === 'meta' && item.attrs['http-equiv']?.toLowerCase() === 'content-security-policy')?.attrs.content;
   if (!csp) {
-    assert.ok(!['index.html', 'credits.html'].includes(relative(root, path)), `${relative(root, path)}: CSP missing`);
+    assert.ok(!['index.html', 'credits.html', 'resume.html'].includes(relative(root, path)), `${relative(root, path)}: CSP missing`);
     console.log(`NOTE ${relative(root, path)}: no document CSP; external dependencies are still checked`);
     return;
   }
@@ -135,6 +136,8 @@ for (const name of pages) {
 const indexPath = resolve(root, 'index.html'), index = read(indexPath);
 for (const id of ['overview', 'experience', 'projects', 'research', 'education', 'leadership', 'contact']) assert.ok(ids(indexPath).has(id), `Missing portfolio view #${id}`);
 assert.ok(!/MSc Candidate|Graduating May/i.test(index), 'Outdated graduate-student status');
+assert.equal((index.match(/data-project-category=/g) ?? []).length, 22, 'Preserve all 22 professional assignments');
+for (const slug of ['chiquita', 'ashley', 'airport', 'roundabouts', 'eagle-lake', 'green-flash', 'miami', 'smyrna']) assert.ok(ids(indexPath).has(`project-${slug}`), `Missing featured project link: ${slug}`);
 assert.match(index, /credits\.html/, 'Project imagery needs a visible credits link');
 const stylesheet = read(resolve(root, 'assets/site.css'));
 assert.match(stylesheet, /prefers-reduced-motion/, 'Styles must respect reduced motion');
