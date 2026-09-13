@@ -85,7 +85,8 @@ button { border: 0; }
 .skip-link:focus { transform: none; }
 
 /* A quiet masthead gives the work room to lead. */
-.site-header { position: sticky; top: 0; z-index: 20; background: #f4f2ebf5; backdrop-filter: blur(12px); }
+.site-header { position: relative; top: 0; z-index: 20; background: #f4f2ebf5; backdrop-filter: blur(12px); }
+.js-ready .site-header { position: sticky; }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 96px; border-bottom: 1px solid var(--line); gap: 32px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
 .brand-mark { display: inline-flex; align-items: center; justify-content: center; width: 35px; height: 35px; border: 1px solid var(--ink); border-radius: 50%; font-size: 13px; font-weight: 700; letter-spacing: -.045em; }
@@ -388,7 +389,7 @@ html.motion-paused { scroll-behavior: auto !important; }
 }
 
 @media (max-width: 760px) {
-  html { scroll-padding-top: 18px; }
+  html { scroll-padding-top: 90px; }
   .wrap { width: calc(100% - 40px); }
   .section { padding-block: 62px; }
   .about-section, .research-section { padding-block: 62px; }
