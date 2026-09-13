@@ -1,0 +1,2 @@
+# Preserve exact official artwork bytes across operating systems.
+assets/brands/*.svg -text
