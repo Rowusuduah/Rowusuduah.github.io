@@ -63,8 +63,8 @@
     });
     document.querySelector('#current-view').textContent = active.dataset.title;
     document.title = active.id === 'overview'
-      ? 'Richmond Owusu Duah, EIT | Transportation Engineering'
-      : `${active.dataset.title} | Richmond Owusu Duah, EIT`;
+      ? 'Richmond Owusu Duah | Transportation Engineering'
+      : `${active.dataset.title} | Richmond Owusu Duah`;
     currentView = active.id;
     setMenu(false);
     window.scrollTo({ top: 0, behavior: 'instant' });
