@@ -1,0 +1,155 @@
+{
+  "note": "These photographs illustrate transportation topics. They do not depict Richmond Owusu Duah project sites, clients, or completed work, and they do not imply photographer endorsement.",
+  "photos": [
+    {
+      "id": "corridor",
+      "photographer": "Haim Charbit",
+      "photographer_url": "https://unsplash.com/@haim_charbit18",
+      "source_url": "https://unsplash.com/photos/aerial-view-of-a-complex-highway-interchange-sTfJ10a5-CM",
+      "download_url": "https://images.unsplash.com/photo-1771154138121-03dfced615c8",
+      "description": "Aerial photograph of a multi-level highway interchange.",
+      "location": null,
+      "suggested_alt": "Illustrative aerial photograph of a highway interchange and connecting roads",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "license_verified": "2026-09-12",
+      "source_label": "Download free; Free to use under the Unsplash License",
+      "illustrative_only": true,
+      "edits": "Resized, converted to WebP, and embedded metadata removed; subject matter unchanged.",
+      "files": [
+        {
+          "file": "corridor.webp",
+          "width": 900,
+          "height": 600,
+          "bytes": 99548
+        },
+        {
+          "file": "corridor-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 51506
+        }
+      ]
+    },
+    {
+      "id": "intersection",
+      "photographer": "Tyler Casey",
+      "photographer_url": "https://unsplash.com/@tylercaseyprod",
+      "source_url": "https://unsplash.com/photos/aerial-photography-of-vehicles-passing-by-an-intersection-road-unfefW2kxEU",
+      "download_url": "https://images.unsplash.com/photo-1577844007924-2208e2c5d2f3",
+      "description": "Overhead photograph of a signalized junction in Concord, California.",
+      "location": "Concord, California, United States",
+      "suggested_alt": "Illustrative overhead photograph of a signalized intersection, turn lanes, and crosswalks",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "license_verified": "2026-09-12",
+      "source_label": "Download free; Free to use under the Unsplash License",
+      "illustrative_only": true,
+      "edits": "Resized, converted to WebP, and embedded metadata removed; subject matter unchanged.",
+      "files": [
+        {
+          "file": "intersection.webp",
+          "width": 900,
+          "height": 599,
+          "bytes": 97122
+        },
+        {
+          "file": "intersection-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 51668
+        }
+      ]
+    },
+    {
+      "id": "airport",
+      "photographer": "David Syphers",
+      "photographer_url": "https://unsplash.com/@dsyphers",
+      "source_url": "https://unsplash.com/photos/an-aerial-view-of-an-airport-with-many-planes-9V1c_ghub40",
+      "download_url": "https://images.unsplash.com/photo-1715268358642-fdab48114710",
+      "description": "Aircraft stands and apron at Sydney Airport International Terminal.",
+      "location": "Sydney Airport, Australia",
+      "suggested_alt": "Illustrative aerial photograph of airport terminal stands and airside pavement",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "license_verified": "2026-09-12",
+      "source_label": "Download free; Free to use under the Unsplash License",
+      "illustrative_only": true,
+      "edits": "Resized, converted to WebP, and embedded metadata removed; subject matter unchanged.",
+      "files": [
+        {
+          "file": "airport.webp",
+          "width": 900,
+          "height": 600,
+          "bytes": 98932
+        },
+        {
+          "file": "airport-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 44998
+        }
+      ]
+    },
+    {
+      "id": "street",
+      "photographer": "Nicolas Savignat",
+      "photographer_url": "https://unsplash.com/@nicolas_svgnt",
+      "source_url": "https://unsplash.com/photos/two-people-crossing-a-busy-city-street-at-a-crosswalk-wlUjCJiEWN4",
+      "download_url": "https://images.unsplash.com/photo-1769034386906-9bdb33005ba4",
+      "description": "Pedestrians using a marked street crossing in New York.",
+      "location": "New York, New York, United States",
+      "suggested_alt": "Illustrative photograph of pedestrians using a marked urban crosswalk",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "license_verified": "2026-09-12",
+      "source_label": "Download free; Free to use under the Unsplash License",
+      "illustrative_only": true,
+      "edits": "Resized, converted to WebP, and embedded metadata removed; subject matter unchanged.",
+      "files": [
+        {
+          "file": "street.webp",
+          "width": 900,
+          "height": 1200,
+          "bytes": 99694
+        },
+        {
+          "file": "street-480.webp",
+          "width": 480,
+          "height": 640,
+          "bytes": 54726
+        }
+      ]
+    },
+    {
+      "id": "roundabout",
+      "photographer": "Joseph Corl",
+      "photographer_url": "https://unsplash.com/@jcorl",
+      "source_url": "https://unsplash.com/photos/an-aerial-view-of-a-busy-city-roundabout-hvaZysTn3Rg",
+      "download_url": "https://images.unsplash.com/photo-1741442092600-d71072f579f3",
+      "description": "Gulfstream roundabout in downtown Sarasota at night.",
+      "location": "Sarasota, Florida, United States",
+      "suggested_alt": "Illustrative aerial photograph of a Sarasota roundabout and connected city streets at night",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "license_verified": "2026-09-12",
+      "source_label": "Download free; Free to use under the Unsplash License",
+      "illustrative_only": true,
+      "edits": "Resized, converted to WebP, and embedded metadata removed; subject matter unchanged.",
+      "files": [
+        {
+          "file": "roundabout.webp",
+          "width": 900,
+          "height": 675,
+          "bytes": 98776
+        },
+        {
+          "file": "roundabout-480.webp",
+          "width": 480,
+          "height": 360,
+          "bytes": 52604
+        }
+      ]
+    }
+  ]
+}
