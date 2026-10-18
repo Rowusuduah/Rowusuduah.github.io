@@ -175,7 +175,7 @@ const profileData = JSON.parse(index.match(/<script type="application\/ld\+json"
 assert.equal(profileData?.['@type'], 'ProfilePage', 'Structured profile is missing');
 assert.equal(profileData.mainEntity?.['@type'], 'Person');
 assert.equal(profileData.mainEntity.name, 'Richmond Owusu Duah');
-assert.equal(profileData.mainEntity.jobTitle, 'Civil Engineer');
+assert.equal(profileData.mainEntity.jobTitle, 'Traffic Analyst');
 assert.equal(profileData.mainEntity.worksFor?.name, 'Stantec');
 assert.equal(profileData.mainEntity.alumniOf?.length, 2);
 for (const key of ['email', 'telephone', 'address', 'birthDate', 'homeLocation', 'honorificSuffix']) {
