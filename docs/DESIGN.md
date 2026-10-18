@@ -1,6 +1,6 @@
 # Professional portfolio direction
 
-The portfolio presents Richmond Owusu Duah as an early-career transportation engineer at Stantec, with prior civil engineering experience in Ghana, a completed USF master's degree, and an interest in applied research.
+The portfolio presents Richmond Owusu Duah as an early-career traffic analyst at Stantec, with prior civil engineering experience in Ghana, a completed USF master's degree, and an interest in applied research.
 
 ## Presentation
 

@@ -4,11 +4,11 @@ Updated 13 September 2026.
 
 ## Public document metadata
 
-The portfolio, résumé, and credits each have one production canonical URL, an author, a specific title and description, complete Open Graph fields, and a large-image social card. The shared 1200 × 630 PNG presents Richmond's existing professional headshot, name, Civil Engineer role at Stantec, and transportation focus. Its SVG source is maintained locally with the site; the photograph is unchanged. Browser and Apple touch icons are included.
+The portfolio, résumé, and credits each have one production canonical URL, an author, a specific title and description, complete Open Graph fields, and a large-image social card. The shared 1200 × 630 PNG presents Richmond's existing professional headshot, name, traffic analyst role at Stantec, and transportation focus. Its SVG source is maintained locally with the site; the photograph is unchanged. Browser and Apple touch icons are included.
 
 Hash sections remain views of the same portfolio document. Their browser title and description follow the active section or featured project; they share the main canonical URL and static social preview. They are not advertised as separately indexed pages. Search engines and social services control their own indexing and cached previews.
 
-The main page includes `ProfilePage` / `Person` JSON-LD containing only the public name, Civil Engineer title, employer, alumni institutions, professional interests, portrait, and LinkedIn/GitHub profiles. No contact details or unconfirmed credentials are included. The inline JSON-LD has an exact SHA-256 allowance in the existing strict CSP. Update that hash when editing the JSON-LD; `node scripts/check.mjs` checks it.
+The main page includes `ProfilePage` / `Person` JSON-LD containing only the public name, Traffic Analyst title, employer, alumni institutions, professional interests, portrait, and LinkedIn/GitHub profiles. No contact details or unconfirmed credentials are included. The inline JSON-LD has an exact SHA-256 allowance in the existing strict CSP. Update that hash when editing the JSON-LD; `node scripts/check.mjs` checks it.
 
 References: [Open Graph protocol](https://ogp.me/), [Google profile-page documentation](https://developers.google.com/search/docs/appearance/structured-data/profile-page), and [Schema.org Person](https://schema.org/Person).
 
